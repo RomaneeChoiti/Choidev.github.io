@@ -9,7 +9,7 @@ import Blog from "./components/Blog";
 
 function App() {
   return (
-    <Router>
+    <Router basename="/Choidev.github.io">
       <div>
         <Header />
         <Routes>
