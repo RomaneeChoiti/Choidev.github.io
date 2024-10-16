@@ -5,6 +5,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "bundle.js",
+    publicPath: "/Choidev.github.io/",
   },
   module: {
     rules: [
@@ -21,7 +22,7 @@ module.exports = {
     extensions: [".js", ".jsx"],
   },
   devServer: {
-    contentBase: path.join(__dirname, "dist"),
+    static: path.join(__dirname, "dist"),
     compress: true,
     port: 9000,
   },
