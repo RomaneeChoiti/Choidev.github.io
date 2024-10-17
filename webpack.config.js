@@ -3,9 +3,9 @@ const path = require("path");
 module.exports = {
   entry: "./src/index.js",
   output: {
-    path: path.resolve(__dirname, "dist"),
+    path: path.resolve(__dirname, "docs"),
     filename: "bundle.js",
-    publicPath: "/Choidev.github.io/",
+    publicPath: "",
   },
   module: {
     rules: [
@@ -22,7 +22,7 @@ module.exports = {
     extensions: [".js", ".jsx"],
   },
   devServer: {
-    static: path.join(__dirname, "dist"),
+    static: path.join(__dirname, "docs"),
     compress: true,
     port: 9000,
   },
