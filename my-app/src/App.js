@@ -7,6 +7,8 @@ import LearningPath from "./pages/Learning Path";
 import Blog from "./pages/Blog";
 import Navbar from "./Components/Navbar";
 import ProjectDetail from "./pages/ProjectDetail";
+import GitBlog from "./pages/GitBlog.js";
+import GitBlogPost from "./pages/GitBlogPost.js";
 
 function App() {
   return (
@@ -19,9 +21,10 @@ function App() {
             <Route path="/Skills" element={<Skills />} />
             <Route path="/works" element={<Works />} />
             <Route path="/works/:projectId" element={<ProjectDetail />} />
-
-            <Route path="/Learning Path" element={<LearningPath />} />
+            <Route path="/LearningPath" element={<LearningPath />} />
             <Route path="/blog" element={<Blog />} />
+            <Route path="/gitblog" element={<GitBlog />} />
+            <Route path="/gitblog/:postId" element={<GitBlogPost />} />
           </Routes>
         </div>
       </div>

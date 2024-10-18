@@ -1,15 +1,14 @@
 /* src/pages/Home.module.css */
 
 .title {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: bold;
-  text-align: center;
   margin-top: 2rem;
-  color: #666;
+  color: #555;
 }
 
 .content {
-  font-size: 1.1rem;
+  font-size: 1rem;
   line-height: 1.6;
   margin: 2rem auto;
   max-width: 800px; /* 텍스트 폭을 제한하여 가독성을 높임 */
