@@ -1,0 +1,30 @@
+/* src/pages/Home.module.css */
+
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 2rem;
+  color: #666;
+}
+
+.content {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin: 2rem auto;
+  max-width: 800px; /* 텍스트 폭을 제한하여 가독성을 높임 */
+  text-align: justify;
+  color: #555;
+}
+
+/* 화면 너비가 768px 이하일 때 반응형 스타일 */
+@media (max-width: 768px) {
+  .title {
+    font-size: 2rem;
+  }
+
+  .content {
+    font-size: 1rem;
+    padding: 0 1rem; /* 여백 추가 */
+  }
+}

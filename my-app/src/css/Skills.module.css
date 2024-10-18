@@ -1,0 +1,45 @@
+/* src/pages/Skills.module.css */
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.title {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.skillSection {
+  margin-bottom: 2rem;
+}
+
+.skillItem {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  gap: 1rem;
+}
+
+.icon {
+  font-size: 1.5rem;
+}
+
+.progressBar {
+  flex: 1;
+  height: 20px;
+  background-color: #e0e0e0;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-left: 1rem;
+  position: relative;
+}
+
+.progressFill {
+  height: 100%;
+  background-color: #4caf50; /* 게이지 색상 */
+  border-radius: 10px 0 0 10px;
+}

@@ -1,0 +1,148 @@
+/* src/css/ProjectDetail.module.css */
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+.flexContainer {
+  display: flex;
+  gap: 2rem; /* 이미지와 텍스트 사이의 간격 */
+  align-items: center; /* 이미지와 텍스트를 세로로 가운데 정렬 */
+  flex-wrap: wrap; /* 화면 크기에 따라 줄바꿈이 가능하도록 설정 */
+}
+.info {
+  flex: 1;
+}
+
+.title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.platform,
+.year,
+.description {
+  font-size: 1rem;
+  margin-bottom: 0.2rem;
+  margin-top: 0.4rem;
+  color: #555;
+}
+
+.image {
+  max-width: 25%;
+  height: auto;
+  margin: 1rem 0;
+}
+
+.sectionHeader {
+  font-size: 1rem;
+  margin-top: 2rem;
+  color: #333;
+}
+
+.subHeader {
+  font-size: 1rem;
+  margin-top: 1rem;
+  color: #555;
+}
+
+/* 기본 스타일: 3개의 이미지가 한 줄에 보이도록 설정 */
+.imageGallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+/* 기본적으로 3개의 이미지를 한 줄에 배치 */
+.galleryImage {
+  flex: 1 1 calc(33.33% - 1rem);
+  max-width: calc(33.33% - 1rem);
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Web 플랫폼일 때의 설정: 2개의 이미지를 한 줄에 배치 */
+.platformWeb .galleryImage {
+  flex: 1 1 100%; /* 전체 너비를 차지하도록 설정 */
+  max-width: 100%;
+}
+
+.videoContainer {
+  margin: 1rem 0;
+  display: flex;
+  justify-content: center;
+}
+.smallVideo {
+  max-width: 40%; /* 높이가 900px 이상일 경우 크기 40% */
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* 큰 비디오 크기 설정 */
+.largeVideo {
+  max-width: 100%; /* 높이가 900px 이하일 경우 크기 80% */
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* 모바일 화면 크기 (768px 이하) */
+@media (max-width: 768px) {
+  .smallVideo {
+    max-width: 30%; /* 모바일에서 작은 비디오는 30%로 설정 */
+  }
+
+  .largeVideo {
+    max-width: 60%; /* 모바일에서 큰 비디오는 60%로 설정 */
+  }
+}
+
+.videoOverview {
+  margin-top: 1rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+.teamSection {
+  margin-top: 2rem;
+}
+
+.teamSection ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.teamSection li {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+/* 새로운 스타일: 카테고리 카드 */
+.categoryCard {
+  background-color: #f9f9f9;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* 카테고리를 그리드 레이아웃으로 배치 */
+.categoryGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3개씩 한 줄 */
+  gap: 1rem;
+  margin-top: 1rem;
+}
+ul {
+  list-style-type: none; /* 점 제거 */
+  padding: 0; /* 기본 패딩 제거 */
+  margin: 0; /* 기본 마진 제거 */
+}
+
+li {
+  margin-bottom: 0.5rem; /* 각 항목 사이의 간격 조정 */
+  margin-left: 0.5rem;
+}
