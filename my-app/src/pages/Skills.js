@@ -22,8 +22,8 @@ function Skills() {
       category: "Backend",
       items: [
         { name: "Node.js", icon: <FaNodeJs />, level: 75 },
-        { name: "AWS Lambda", icon: <FaAws />, level: 70 }, // AWS 아이콘 사용
-        { name: "API Gateway", icon: <FaAws />, level: 70 }, // AWS 아이콘 사용
+        { name: "AWS Lambda", icon: <FaAws />, level: 70 },
+        { name: "API Gateway", icon: <FaAws />, level: 70 },
       ],
     },
     {
@@ -42,14 +42,15 @@ function Skills() {
 
   return (
     <div className={styles.container}>
-      <h1 className={styles.title}>My Skills</h1>
       {skills.map((skillCategory, index) => (
         <section key={index} className={styles.skillSection}>
           <h2>{skillCategory.category}</h2>
           {skillCategory.items.map((skill, idx) => (
             <div key={idx} className={styles.skillItem}>
-              {skill.icon && <div className={styles.icon}>{skill.icon}</div>}
-              <p>{skill.name}</p>
+              <div className={styles.skillInfo}>
+                {skill.icon && <div className={styles.icon}>{skill.icon}</div>}
+                <p className={styles.skillName}>{skill.name}</p>
+              </div>
               <div className={styles.progressBar}>
                 <div
                   className={styles.progressFill}
