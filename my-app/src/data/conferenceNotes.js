@@ -8,7 +8,7 @@ const conferenceNotes = [
     title:
       "07/08 [컨퍼런스] 토스 SLASH23 - toss가 wed에서 React Native로 바꿔야만 했던 이유 (2편)",
     date: "2023/07/08",
-    link: "/ConferenceNotes/post2",
+    link: "/ConferenceNotes/post3",
     content: post3Content,
   },
   {
