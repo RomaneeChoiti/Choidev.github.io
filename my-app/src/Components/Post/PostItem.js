@@ -11,7 +11,7 @@ function PostItem({ post, itemStyle, source }) {
       <a href={process.env.PUBLIC_URL + link}>{post.title}</a>
       <p className={styles.postDate}>{post.date}</p>
       <Excerpt content={post.content} length={100} />
-      <a href={link} className={styles.readMore}>
+      <a href={process.env.PUBLIC_URL + link} className={styles.readMore}>
         Read More
       </a>
     </li>

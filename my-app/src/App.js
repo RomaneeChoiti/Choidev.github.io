@@ -12,7 +12,7 @@ import Post from "./Components/Post/Post.js";
 
 function App() {
   return (
-    <Router basename="/Choidev.github.io">
+    <Router basename={process.env.PUBLIC_URL}>
       <div className="container">
         <Navbar />
         <div className="main-content">
@@ -22,10 +22,10 @@ function App() {
             <Route path="/works" element={<Works />} />
             <Route path="/works/:projectId" element={<ProjectDetail />} />
             <Route path="/ConferenceNotes" element={<ConferenceNotes />} />
-            <Route path="/ConferenceNotes/:postId" element={<Post />} />
             <Route path="/blog" element={<Blog />} />
-            <Route path="/gitblog" element={<GitBlog />} />
+            <Route path="/ConferenceNotes/:postId" element={<Post />} />
             <Route path="/gitblog/:postId" element={<Post />} />
+            <Route path="/gitblog" element={<GitBlog />} />
           </Routes>
         </div>
       </div>

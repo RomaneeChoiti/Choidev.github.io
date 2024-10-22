@@ -34,7 +34,8 @@ const post3Content = `
   <h3>결론 및 다음 단계</h3>
   <p>이러한 최적화 기술을 통해 토스는 React Native로의 전환에서 발생하는 문제를 효과적으로 해결할 수 있었습니다. 특히, JS 파일의 크기를 효율적으로 줄임으로써 다운로드 및 로드 시간을 줄였으며, 이를 통해 더 나은 사용자 경험을 제공할 수 있었습니다.</p>
   <p>이후의 작업에서는 번들러 설정의 세부 사항과 추가적인 최적화 기법에 대해 다루고, 그동안의 경험을 바탕으로 한 문제 해결 사례를 공유할 예정입니다.</p>
-  <p>더 자세한 내용은 SLASH23 컨퍼런스 영상과 SLASH21 영상을 통해 확인할 수 있습니다. 참고 링크: <a href="https://www.youtube.com/watch?v=EP7g5R-7zwM&t=584s" target="_blank">SLASH21 영상 보기</a></p>
+  <p>더 자세한 내용은 SLASH23 컨퍼런스 영상과 SLASH21 영상을 통해 확인할 수 있습니다. </br>
+  참고 링크: <a href="https://www.youtube.com/watch?v=EP7g5R-7zwM&t=584s" target="_blank">SLASH21 영상 보기</a></p>
 `;
 
 export default post3Content;
