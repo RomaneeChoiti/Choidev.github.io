@@ -1,4 +1,3 @@
-// src/components/Excerpt.js
 import React from "react";
 
 export function Excerpt({ content, length }) {

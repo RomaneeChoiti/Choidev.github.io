@@ -1,29 +1,23 @@
-// src/pages/PostPage.js
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "../../css/Post.module.css";
-import gitblog from "../../data/posts";
+import gitblog from "../../data/blogposts";
 import { Excerpt } from "./Excerpt";
 import conferencenotes from "../../data/conferenceNotes";
 
 function PostPage({ type, postId }) {
   const navigate = useNavigate();
 
-  // 데이터 선택: type에 따라 posts 또는 conferenceNotes를 사용
   const data =
     type === "gitblog"
       ? gitblog
       : type === "conferencenotes"
       ? conferencenotes
       : [];
-  console.log("Data source:", data);
-  console.log("Current postId:", postId);
 
-  // 단일 포스트를 조회
   const post = postId ? data.find((p) => p.id === postId) : null;
 
   if (postId && !post) {
-    console.log("Post not found for id:", postId);
     return <p>Post not found.</p>;
   }
 
@@ -31,7 +25,6 @@ function PostPage({ type, postId }) {
     navigate(`/${type}/${id}`, { replace: false });
   };
 
-  // 단일 포스트 페이지일 때 렌더링
   if (post) {
     return (
       <div className={styles.container}>
@@ -45,7 +38,6 @@ function PostPage({ type, postId }) {
     );
   }
 
-  // 목록 페이지일 때 렌더링
   return (
     <div className={styles.container}>
       <h2>{type === "gitblog" ? "Recent Posts" : "Past Conferences"}</h2>
