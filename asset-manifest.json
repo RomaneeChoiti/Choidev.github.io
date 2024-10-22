@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "https://romaneechoiti.github.io/Choidev.github.io/static/css/main.cec9e1f2.css",
-    "main.js": "https://romaneechoiti.github.io/Choidev.github.io/static/js/main.6bb1d5be.js",
+    "main.js": "https://romaneechoiti.github.io/Choidev.github.io/static/js/main.30d52b39.js",
     "static/media/recoding.mp4": "https://romaneechoiti.github.io/Choidev.github.io/static/media/recoding.cb1c21a814f94d9d3e76.mp4",
     "static/media/pattern.mp4": "https://romaneechoiti.github.io/Choidev.github.io/static/media/pattern.f8056eac5ce44e6cbb6b.mp4",
     "static/media/choi.png": "https://romaneechoiti.github.io/Choidev.github.io/static/media/choi.0f2efa27948de4cfabf6.png",
@@ -26,10 +26,10 @@
     "static/media/git.png": "https://romaneechoiti.github.io/Choidev.github.io/static/media/git.82156e0c9c2d8763d30b.png",
     "index.html": "https://romaneechoiti.github.io/Choidev.github.io/index.html",
     "main.cec9e1f2.css.map": "https://romaneechoiti.github.io/Choidev.github.io/static/css/main.cec9e1f2.css.map",
-    "main.6bb1d5be.js.map": "https://romaneechoiti.github.io/Choidev.github.io/static/js/main.6bb1d5be.js.map"
+    "main.30d52b39.js.map": "https://romaneechoiti.github.io/Choidev.github.io/static/js/main.30d52b39.js.map"
   },
   "entrypoints": [
     "static/css/main.cec9e1f2.css",
-    "static/js/main.6bb1d5be.js"
+    "static/js/main.30d52b39.js"
   ]
 }
