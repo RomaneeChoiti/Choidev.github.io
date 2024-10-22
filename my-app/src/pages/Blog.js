@@ -8,7 +8,6 @@ function Blog() {
   const navigate = useNavigate();
 
   const handleBlogClick = (link, id) => {
-    // GitBlog일 경우 라우터를 통해 이동, 그렇지 않으면 새 창 열기
     if (id === "gitblog") {
       navigate("/gitblog");
     } else {

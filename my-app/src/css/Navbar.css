@@ -1,8 +1,7 @@
-/* src/components/Navbar.css */
 nav {
   padding: 1rem;
-  width: 20%; /* 전체 너비를 차지하도록 설정 */
-  box-sizing: border-box; /* 패딩 포함 너비 계산 */
+  width: 20%;
+  box-sizing: border-box;
 }
 
 nav ul {
@@ -21,5 +20,5 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  color: #ff6347; /* 토마토 색상으로 변경 */
+  color: #ff6347;
 }

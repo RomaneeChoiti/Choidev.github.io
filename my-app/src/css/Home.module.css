@@ -9,10 +9,10 @@
 
 .header {
   display: flex;
-  align-items: center; /* 이미지와 텍스트를 수직 가운데 정렬 */
-  gap: 1rem; /* 이미지와 텍스트 사이의 간격 */
-  width: 100%; /* 가로로 최대 넓이를 차지하도록 설정 */
-  justify-content: center; /* 이미지와 텍스트를 가운데 정렬 */
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  justify-content: center;
   margin-bottom: 2rem;
 }
 
@@ -20,27 +20,25 @@
   font-size: 1.5rem;
   font-weight: bold;
   color: #333;
-  text-align: left; /* 텍스트를 왼쪽 정렬 */
+  text-align: left;
 }
 
 .profileImage {
   width: 10rem;
   height: 10rem;
-  border-radius: 50%; /* 원형으로 만들기 */
-  object-fit: cover; /* 이미지가 잘리지 않도록 */
+  border-radius: 50%;
+  object-fit: cover;
 }
 
-/* 본문 내용 스타일 */
 .content {
   font-size: 1rem;
   line-height: 1.6;
   margin: 2rem auto;
-  max-width: 800px; /* 텍스트 폭을 제한하여 가독성을 높임 */
+  max-width: 800px;
   text-align: justify;
   color: #555;
 }
 
-/* 링크 스타일 */
 .link {
   color: #1a73e8;
   text-decoration: none;
@@ -63,10 +61,9 @@
   text-decoration: underline;
 }
 
-/* 반응형 스타일 */
 @media (max-width: 768px) {
   .header {
-    flex-direction: column; /* 작은 화면에서는 세로로 쌓이도록 변경 */
+    flex-direction: column;
   }
 
   .title {
@@ -76,7 +73,7 @@
 
   .content {
     font-size: 0.9rem;
-    padding: 0 1rem; /* 여백 추가 */
-    text-align: center; /* 작은 화면에서는 중앙 정렬 */
+    padding: 0 1rem;
+    text-align: center;
   }
 }
