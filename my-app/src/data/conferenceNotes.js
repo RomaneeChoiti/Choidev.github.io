@@ -2,13 +2,13 @@ import post1Content from "./conferenceContent.js/post1Content";
 import post2Content from "./conferenceContent.js/post2Content";
 import post3Content from "./conferenceContent.js/post3Content";
 
-const conferenceNotes = [
+const conferencenotes = [
   {
     id: "post3",
     title:
       "07/08 [컨퍼런스] 토스 SLASH23 - toss가 wed에서 React Native로 바꿔야만 했던 이유 (2편)",
     date: "2023/07/08",
-    link: "/ConferenceNotes/post3",
+    link: "/conferencenotes/post3",
     content: post3Content,
   },
   {
@@ -16,7 +16,7 @@ const conferenceNotes = [
     title:
       "07/02 [컨퍼런스] 토스 SLASH23 - toss가 wed에서 React Native로 바꿔야만 했던 이유 (1편)",
     date: "2023/07/02",
-    link: "/ConferenceNotes/post2",
+    link: "/conferencenotes/post2",
     content: post2Content,
   },
   {
@@ -24,9 +24,9 @@ const conferenceNotes = [
     title:
       "06/24 [세미나] - DEVOCEAN, 29회차 Tech 세미나 “웹 프론트엔드 성능 최적화 방법 및 적용 사례”",
     date: "2023/06/24",
-    link: "/ConferenceNotes/post1",
+    link: "/conferencenotes/post1",
     content: post1Content,
   },
 ];
 
-export default conferenceNotes;
+export default conferencenotes;

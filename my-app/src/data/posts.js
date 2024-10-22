@@ -1,5 +1,5 @@
 // src/data/posts.js
-const posts = [
+const gitblog = [
   {
     id: "post1",
     title: "Understanding Git Basics",
@@ -38,4 +38,4 @@ const posts = [
   },
 ];
 
-export default posts;
+export default gitblog;

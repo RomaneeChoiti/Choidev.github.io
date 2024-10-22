@@ -1,6 +1,7 @@
+// src/components/Excerpt.js
 import React from "react";
 
-function Excerpt({ content, length }) {
+export function Excerpt({ content, length }) {
   const getExcerpt = (content, length = 100) => {
     const parser = new DOMParser();
     const parsedDocument = parser.parseFromString(content, "text/html");
@@ -20,5 +21,3 @@ function Excerpt({ content, length }) {
     />
   );
 }
-
-export default Excerpt;

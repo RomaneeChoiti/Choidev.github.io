@@ -3,12 +3,10 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import Skills from "./pages/Skills";
 import Works from "./pages/Works";
-import ConferenceNotes from "./pages/ConferenceNotes.js";
 import Blog from "./pages/Blog";
 import Navbar from "./Components/Navbar";
 import ProjectDetail from "./pages/ProjectDetail";
-import GitBlog from "./pages/GitBlog.js";
-import Post from "./Components/Post/Post.js";
+import DynamicPostPage from "./Components/DynamicPostPage.js";
 
 function App() {
   return (
@@ -21,11 +19,9 @@ function App() {
             <Route path="/Skills" element={<Skills />} />
             <Route path="/works" element={<Works />} />
             <Route path="/works/:projectId" element={<ProjectDetail />} />
-            <Route path="/ConferenceNotes" element={<ConferenceNotes />} />
             <Route path="/blog" element={<Blog />} />
-            <Route path="/ConferenceNotes/:postId" element={<Post />} />
-            <Route path="/gitblog/:postId" element={<Post />} />
-            <Route path="/gitblog" element={<GitBlog />} />
+            <Route path="/:type" element={<DynamicPostPage />} />
+            <Route path="/:type/:postId" element={<DynamicPostPage />} />{" "}
           </Routes>
         </div>
       </div>
