@@ -12,7 +12,7 @@ import Post from "./Components/Post/Post.js";
 
 function App() {
   return (
-    <Router>
+    <Router basename="/Choidev.github.io">
       <div className="container">
         <Navbar />
         <div className="main-content">

@@ -10,10 +10,10 @@ function Skills() {
     {
       category: "Frontend",
       items: [
-        { name: "React", icon: <FaReact />, level: 70 },
+        { name: "React", icon: <FaReact />, level: 65 },
         { name: "Next.js", icon: null, level: 0 },
-        { name: "React Native", icon: <FaReact />, level: 70 },
-        { name: "EXPO", icon: <SiExpo />, level: 65 },
+        { name: "React Native", icon: <FaReact />, level: 50 },
+        { name: "EXPO", icon: <SiExpo />, level: 50 },
         { name: "HTML/CSS", icon: null, level: 70 },
         { name: "JavaScript", icon: null, level: 70 },
       ],
@@ -21,21 +21,21 @@ function Skills() {
     {
       category: "Backend",
       items: [
-        { name: "Node.js", icon: <FaNodeJs />, level: 75 },
-        { name: "AWS Lambda", icon: <FaAws />, level: 70 },
-        { name: "API Gateway", icon: <FaAws />, level: 70 },
+        { name: "Node.js", icon: <FaNodeJs />, level: 65 },
+        { name: "AWS Lambda", icon: <FaAws />, level: 45 },
+        { name: "API Gateway", icon: <FaAws />, level: 45 },
       ],
     },
     {
       category: "Database",
-      items: [{ name: "DynamoDB", icon: <FaDatabase />, level: 65 }],
+      items: [{ name: "DynamoDB", icon: <FaDatabase />, level: 40 }],
     },
     {
       category: "Tools & Platforms",
       items: [
-        { name: "AWS (General)", icon: <FaAws />, level: 75 },
-        { name: "EXPO GO", icon: <SiExpo />, level: 70 },
-        { name: "Git", icon: null, level: 70 },
+        { name: "AWS (General)", icon: <FaAws />, level: 30 },
+        { name: "EXPO GO", icon: <SiExpo />, level: 60 },
+        { name: "Git", icon: null, level: 65 },
       ],
     },
   ];
