@@ -5,7 +5,6 @@ import { FaReact, FaNodeJs, FaDatabase, FaAws } from "react-icons/fa";
 import { SiExpo } from "react-icons/si";
 
 function Skills() {
-  // 기술 목록 데이터
   const skills = [
     {
       category: "Frontend",
