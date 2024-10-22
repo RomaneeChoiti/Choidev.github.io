@@ -35,7 +35,7 @@ const projects = [
       tools: ["axios", "eslint", "Prettier"],
     },
     additionalInfo: [
-      "'GreenWaySeoul'은 외국 관광객을 대상으로 하는 어플리케이션으로, 사용자의 위치를 기반으로 서울시 내 쓰레기통 위치를 확인하고 사용자들이 편리하게 서울시 내 쓰레기통을 찾아 이용할 수 있도록 도와줍니다.",
+      "'GreenWaySeoul'은 BinFinder 팀 프로젝트의 지도 기능을 고도화하여 독자적으로 어플리케이션화한 개인 프로젝트입니다.",
     ],
     image: GreenWaySeoul,
     images: [Loading, Searching, Complete],
@@ -75,8 +75,7 @@ const projects = [
     images: [about, community, fintrash, how2, login, plogging],
     video: "http://youtu.be/xK-ozv_efD8?si=3iv3ghvtDeSt-XpU",
     VideoOverview: [
-      "BinFinder는 사용자가 근처 쓰레기통 위치를 확인할 수 있도록 지원하는 웹 애플리케이션으로, 환경 보호와 쓰레기 관리를 목표로 합니다.",
-      " 이 웹 애플리케이션은 프론트엔드 개발자 3명과 백엔드 개발자 3명이 협력하여 개발했습니다.",
+      "이 영상은 팀 에베레스트의 기술 발표 영상입니다. 데이터 출처는 서울시 가로휴지통 설치정보 공공데이터이며, 이 웹 애플리케이션은 3명의 프론트엔드 개발자와 3명의 백엔드 개발자가 협력하여 개발했습니다.",
     ],
     link: "/works/BinFinder",
     gitLink:
