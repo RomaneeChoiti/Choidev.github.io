@@ -11,11 +11,13 @@ function VideoRenderer({ video }) {
 
   function convertToYouTubeEmbedURL(url) {
     if (url.includes("watch")) {
-      return url.replace("watch?v=", "embed/");
+      return url.replace("http:", "https:").replace("watch?v=", "embed/");
     } else if (url.includes("youtu.be")) {
-      return url.replace("youtu.be/", "youtube.com/embed/");
+      return url
+        .replace("http:", "https:")
+        .replace("youtu.be/", "youtube.com/embed/");
     }
-    return url;
+    return url.replace("http:", "https:");
   }
 
   function handleVideoHeight(e) {
