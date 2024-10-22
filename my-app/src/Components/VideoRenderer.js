@@ -9,15 +9,19 @@ function VideoRenderer({ video }) {
     return url.includes("youtube.com") || url.includes("youtu.be");
   }
 
-  function convertToYouTubeEmbedURL(url) {
-    if (url.includes("watch")) {
-      return url.replace("http:", "https:").replace("watch?v=", "embed/");
-    } else if (url.includes("youtu.be")) {
-      return url
-        .replace("http:", "https:")
-        .replace("youtu.be/", "youtube.com/embed/");
+  function convertToSecureEmbedURL(url) {
+    // HTTP를 HTTPS로 변환
+    const secureURL = url.replace(/^http:\/\//i, "https://");
+
+    // YouTube URL을 임베드 형식으로 변환
+    if (secureURL.includes("youtube.com/watch")) {
+      return secureURL.replace("watch?v=", "embed/");
+    } else if (secureURL.includes("youtu.be")) {
+      return secureURL.replace("youtu.be/", "youtube.com/embed/");
     }
-    return url.replace("http:", "https:");
+
+    // 기타 URL은 그냥 반환
+    return secureURL;
   }
 
   function handleVideoHeight(e) {
@@ -29,7 +33,7 @@ function VideoRenderer({ video }) {
   if (isYouTubeLink(video)) {
     return (
       <iframe
-        src={convertToYouTubeEmbedURL(video)}
+        src={convertToSecureEmbedURL(video)}
         title="YouTube Video"
         className={videoClass}
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

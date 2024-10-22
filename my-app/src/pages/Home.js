@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "../css/Home.module.css";
+import { Link } from "react-router-dom";
 
 function Home() {
   return (
@@ -38,11 +39,11 @@ function Home() {
         <br />
         <a href="https://github.com/RomaneeChoiti" className={styles.link}>
           GitHub
-        </a>{" "}
-        |{" "}
-        <a href="/blog" className={styles.link}>
-          Blog
         </a>
+        <br />
+        <Link to="/blog" className={styles.link}>
+          Blog
+        </Link>
       </p>
     </div>
   );
