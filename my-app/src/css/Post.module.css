@@ -13,6 +13,16 @@ h1 {
   color: #333;
   font-weight: bold;
 }
+h2 {
+  color: #777777;
+}
+h2:hover {
+  color: #000000;
+  font-weight: bold;
+}
+p {
+  color: #777777;
+}
 
 .date,
 .postDate {
@@ -25,7 +35,7 @@ h1 {
 .content h3 {
   font-size: 1.5rem;
   margin-top: 1rem;
-  color: #444;
+  color: #444444e2;
 }
 
 .content ul {
