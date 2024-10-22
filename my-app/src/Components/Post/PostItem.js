@@ -8,7 +8,7 @@ function PostItem({ post, itemStyle, source }) {
 
   return (
     <li className={`${styles.postItem} ${itemStyle}`}>
-      <a href={link}>{post.title}</a>
+      <a href={process.env.PUBLIC_URL + link}>{post.title}</a>
       <p className={styles.postDate}>{post.date}</p>
       <Excerpt content={post.content} length={100} />
       <a href={link} className={styles.readMore}>
