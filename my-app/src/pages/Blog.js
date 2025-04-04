@@ -17,7 +17,7 @@ function Blog() {
 
   return (
     <div className={styles.container}>
-      <p>현재 블로그는 gitblog만 운영 중에 있습니다</p>
+      <p>현재 블로그는 gitblog와 벨로그만 운영 중에 있습니다</p>
       <div className={styles.grid}>
         {blogs.map((blog, index) => (
           <Card key={index} item={blog} onClick={handleBlogClick} />

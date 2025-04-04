@@ -9,9 +9,6 @@ function Navbar() {
           <Link to="/">Choi dev</Link>
         </li>
         <li>
-          <Link to="/Skills">Skills</Link>
-        </li>
-        <li>
           <Link to="/works">Works</Link>
         </li>
         <li>

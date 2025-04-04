@@ -18,6 +18,33 @@ import pattern4 from "../assets/images/artwork/pattern4.png";
 import patternMP4 from "../assets/video/pattern.mp4";
 
 const projects = [
+    // 추가 프로젝트는 위에서부터 계속 추가하세요
+    {
+      id: "A-meawooClub",
+      title: "A-meawoo Club",
+      year: "2025",
+      platform: ["Web"],
+      description:
+        "A-meawoo Club은 매운맛을 사랑하는 사람들을 위한 커뮤니티 플랫폼으로, 사용자들이 매운 음식에 대한 정보와 경험을 공유할 수 있는 공간입니다.",
+      features: ["사용자 위치 기반 쓰레기통 탐색", "쓰레기통 위치 표시"],
+      techStack: {
+        frontend: ["React", "Next", "TypeScript", "zustand", "styled-components", "supabase"],
+        uiux: ["Figma"],
+        backend: ["supabase"],
+
+      },
+      additionalInfo: [
+        "'GreenWaySeoul'은 BinFinder 팀 프로젝트의 지도 기능을 고도화하여 독자적으로 어플리케이션화한 개인 프로젝트입니다.",
+      ],
+      image: "",
+      images: [],
+      VideoOverview:
+        "이 동영상을 통해 'GreenWaySeoul'이 관광객에게 서울 내 쓰레기통 위치 안내 서비스를 제공하여 편리함을 어떻게 향상시키는지 확인해보세요.",
+      link: "/works/A-meawooClub",
+      gitLink: "https://github.com/FRONT-END-BOOTCAMP-PLUS-3/A-maewoClub",
+      // blogLink: "https://github.com/FRONT-END-BOOTCAMP-PLUS-3/A-maewoClub/wiki/DailyScrum",
+      team: [{ name: "최승원", role: "Frontend Developer" }],
+    },
   {
     id: "GreenWaySeoul",
     title: "GreenWaySeoul",
@@ -123,7 +150,6 @@ const projects = [
     blogLink: "",
     team: [{ name: "최승원", role: "Frontend Developer" }],
   },
-  // 추가 프로젝트를 여기에 계속 추가하세요
 ];
 
 export default projects;
