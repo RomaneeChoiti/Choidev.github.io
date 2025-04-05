@@ -3,7 +3,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "../css/Work.module.css";
 import projects from "../data/projects";
-import Card from "../Components/Card";
+import Card from "../components/Card";
 
 function Work() {
   const navigate = useNavigate();

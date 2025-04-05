@@ -3,9 +3,9 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home.js";
 import Works from "./pages/Works.js";
 import Blog from "./pages/Blog.js";
-import Navbar from "./Components/Navbar.js";
+import Navbar from "./components/Navbar.js";
 import ProjectDetail from "./pages/ProjectDetail.js";
-import DynamicPostPage from "./Components/DynamicPostPage.js";
+import DynamicPostPage from "./components/DynamicPostPage.js";
 
 function App() {
   return (
