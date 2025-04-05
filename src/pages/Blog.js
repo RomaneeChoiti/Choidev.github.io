@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "../css/Blog.module.css";
 import blogs from "../data/blogs";
-import Card from "../Components/Card";
+import Card from "../components/Card";
 import { useNavigate } from "react-router-dom";
 
 function Blog() {
