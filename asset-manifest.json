@@ -1,13 +1,15 @@
 {
   "files": {
     "main.css": "/Choidev.github.io/static/css/main.7c128c70.css",
-    "main.js": "/Choidev.github.io/static/js/main.0973d4c0.js",
+    "main.js": "/Choidev.github.io/static/js/main.6a90be3e.js",
     "static/media/recoding.mp4": "/Choidev.github.io/static/media/recoding.cb1c21a814f94d9d3e76.mp4",
     "static/media/pattern.mp4": "/Choidev.github.io/static/media/pattern.f8056eac5ce44e6cbb6b.mp4",
     "static/media/choi.png": "/Choidev.github.io/static/media/choi.0f2efa27948de4cfabf6.png",
     "static/media/about.png": "/Choidev.github.io/static/media/about.42ebc5815642db8a8d65.png",
     "static/media/pattern4.png": "/Choidev.github.io/static/media/pattern4.a834c738d94c25743e13.png",
     "static/media/pattern3.png": "/Choidev.github.io/static/media/pattern3.1b15762bb4c1ff654ad2.png",
+    "static/media/character.png": "/Choidev.github.io/static/media/character.6df478212fc6e37315ba.png",
+    "static/media/ending.png": "/Choidev.github.io/static/media/ending.e73a1c6f9dd4d6a01200.png",
     "static/media/pattern2.png": "/Choidev.github.io/static/media/pattern2.d60780687ef64d9c02c1.png",
     "static/media/Searching.png": "/Choidev.github.io/static/media/Searching.eeeb04dfc5d24a4a88c6.png",
     "static/media/Complete.png": "/Choidev.github.io/static/media/Complete.132f957c202146722a98.png",
@@ -16,8 +18,10 @@
     "static/media/GreenWaySeoul.png": "/Choidev.github.io/static/media/GreenWaySeoul.42ea04f9cec08012c2d8.png",
     "static/media/pattern.png": "/Choidev.github.io/static/media/pattern.8f0ece09ae716faa3e40.png",
     "static/media/how2.png": "/Choidev.github.io/static/media/how2.49715af5aacde80c1f2f.png",
+    "static/media/quest.png": "/Choidev.github.io/static/media/quest.a06ebf42bb09d8b27366.png",
     "static/media/Loading.png": "/Choidev.github.io/static/media/Loading.1b8acf374da42d628c2a.png",
     "static/media/pattern1.png": "/Choidev.github.io/static/media/pattern1.d4d1c90e959a09ae2ffe.png",
+    "static/media/logo.png": "/Choidev.github.io/static/media/logo.59cb69e874406b053692.png",
     "static/media/binfindericon.jpg": "/Choidev.github.io/static/media/binfindericon.2ca412c5a54678f34a48.jpg",
     "static/media/community.png": "/Choidev.github.io/static/media/community.b04a6e853f2971d8755e.png",
     "static/media/login.png": "/Choidev.github.io/static/media/login.749b991c343d8527a770.png",
@@ -26,10 +30,10 @@
     "static/media/git.png": "/Choidev.github.io/static/media/git.82156e0c9c2d8763d30b.png",
     "index.html": "/Choidev.github.io/index.html",
     "main.7c128c70.css.map": "/Choidev.github.io/static/css/main.7c128c70.css.map",
-    "main.0973d4c0.js.map": "/Choidev.github.io/static/js/main.0973d4c0.js.map"
+    "main.6a90be3e.js.map": "/Choidev.github.io/static/js/main.6a90be3e.js.map"
   },
   "entrypoints": [
     "static/css/main.7c128c70.css",
-    "static/js/main.0973d4c0.js"
+    "static/js/main.6a90be3e.js"
   ]
 }
