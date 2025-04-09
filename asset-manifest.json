@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Choidev.github.io/static/css/main.7c128c70.css",
-    "main.js": "/Choidev.github.io/static/js/main.6a90be3e.js",
+    "main.js": "/Choidev.github.io/static/js/main.da01bbfe.js",
     "static/media/recoding.mp4": "/Choidev.github.io/static/media/recoding.cb1c21a814f94d9d3e76.mp4",
     "static/media/pattern.mp4": "/Choidev.github.io/static/media/pattern.f8056eac5ce44e6cbb6b.mp4",
     "static/media/choi.png": "/Choidev.github.io/static/media/choi.0f2efa27948de4cfabf6.png",
@@ -30,10 +30,10 @@
     "static/media/git.png": "/Choidev.github.io/static/media/git.82156e0c9c2d8763d30b.png",
     "index.html": "/Choidev.github.io/index.html",
     "main.7c128c70.css.map": "/Choidev.github.io/static/css/main.7c128c70.css.map",
-    "main.6a90be3e.js.map": "/Choidev.github.io/static/js/main.6a90be3e.js.map"
+    "main.da01bbfe.js.map": "/Choidev.github.io/static/js/main.da01bbfe.js.map"
   },
   "entrypoints": [
     "static/css/main.7c128c70.css",
-    "static/js/main.6a90be3e.js"
+    "static/js/main.da01bbfe.js"
   ]
 }
