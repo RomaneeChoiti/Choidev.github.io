@@ -1,8 +1,17 @@
 import post1Content from "./conferenceContent.js/post1Content";
 import post2Content from "./conferenceContent.js/post2Content";
 import post3Content from "./conferenceContent.js/post3Content";
+import post4Content from "./conferenceContent.js/post4Content";
 
 const conferencenotes = [
+  {
+    id: "post4",
+    title:
+      "선물하기 프론트엔드 성능 개선기 / if(kakaoAI)2024, 기술 컨퍼런스",
+    date: "2024/00/00",
+    link: "/conferencenotes/post3",
+    content: post4Content,
+  },
   {
     id: "post3",
     title:
