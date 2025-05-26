@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "../../css/Post.module.css";
-import gitblog from "../../data/blogposts";
+import gitblog from "../../data/blogPosts";
 import { Excerpt } from "./Excerpt";
 import conferencenotes from "../../data/conferenceNotes";
 
