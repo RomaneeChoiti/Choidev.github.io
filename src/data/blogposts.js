@@ -1,5 +1,5 @@
-import blogpost1Content from "./BlogPostContent.js/blogpost1Content";
-import blogpost2Content from "./BlogPostContent.js/blogpost2Content";
+import blogpost1Content from "./BlogPostContent/blogpost1Content";
+import blogpost2Content from "./BlogPostContent/blogpost2Content";
 
 // src/data/posts.js
 const gitblog = [

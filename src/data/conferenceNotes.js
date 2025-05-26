@@ -1,7 +1,7 @@
-import post1Content from "./conferenceContent.js/post1Content";
-import post2Content from "./conferenceContent.js/post2Content";
-import post3Content from "./conferenceContent.js/post3Content";
-import post4Content from "./conferenceContent.js/post4Content";
+import post1Content from "./conferenceContent/post1Content";
+import post2Content from "./conferenceContent/post2Content";
+import post3Content from "./conferenceContent/post3Content";
+import post4Content from "./conferenceContent/post4Content";
 
 const conferencenotes = [
   {
