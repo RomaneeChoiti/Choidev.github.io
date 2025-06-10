@@ -7,35 +7,12 @@
   gap: 1.5rem;
 }
 
-h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-  color: #333;
-  font-weight: bold;
-}
-h2 {
-  color: #777777;
-}
-h2:hover {
-  color: #000000;
-  font-weight: bold;
-}
-p {
-  color: #777777;
-}
 
 .date,
 .postDate {
   font-size: 0.9rem;
   color: #777;
   margin-bottom: 1.5rem;
-}
-
-.content h2,
-.content h3 {
-  font-size: 1.5rem;
-  margin-top: 1rem;
-  color: #444444e2;
 }
 
 .content ul {
@@ -71,10 +48,7 @@ p {
 }
 
 .content p {
-  margin: 1rem 0;
-  color: #555;
-  font-size: 1rem;
-  line-height: 1.6;
+  line-height: 1.5;
 }
 
 .postItem {
@@ -96,4 +70,12 @@ p {
 .postList {
   list-style: none;
   padding: 0;
+}
+
+.content h1,
+.content h2,
+.content h3,
+.content h4 {
+  margin-top: 4rem;
+  margin-bottom: 0.5rem;
 }
