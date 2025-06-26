@@ -1,18 +1,23 @@
-import React from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "../../css/Post.module.css";
-import gitblog from "../../data/blogPosts";
 import { Excerpt } from "./Excerpt";
-import conferencenotes from "../../data/conferenceNotes";
+import conferencenotes from "../../pages/ConferenceNotes";
+import backendnotes from "../../pages/BackendNotes";
+import frontendnotes from "../../pages/FrontendNotes";
+import hnsskillnotes from "../../pages/HnSskillNotes";
 
 function PostPage({ type, postId }) {
   const navigate = useNavigate();
 
   const data =
-    type === "gitblog"
-      ? gitblog
-      : type === "conferencenotes"
+    type === "conferencenotes"
       ? conferencenotes
+      : type === "backendnotes"
+      ? backendnotes
+      : type === "frontendnotes"
+      ? frontendnotes
+      : type === "hnsskillnotes"
+      ? hnsskillnotes
       : [];
 
   const post = postId ? data.find((p) => p.id === postId) : null;
@@ -40,7 +45,17 @@ function PostPage({ type, postId }) {
 
   return (
     <div className={styles.container}>
-      <h2>{type === "gitblog" ? "Recent Posts" : "Past Conferences"}</h2>
+      <h2>
+        {type === "conferencenotes"
+          ? "Conference Notes"
+          : type === "backendnotes"
+          ? "Backend Notes"
+          : type === "frontendnotes"
+          ? "Frontend Notes"
+          : type === "hnsskillnotes"
+          ? "HnS Skill Notes"
+          : "Past Notes"}
+      </h2>
       <ul className={styles.postList}>
         {data.map((post) => (
           <li

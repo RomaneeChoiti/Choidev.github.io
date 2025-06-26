@@ -8,7 +8,7 @@ const blogs = [
   {
     id: "gitblog",
     title: "gitblog",
-    description: "새로운 통합형 블로그",
+    description: "통합 블로그",
     image: git,
   },
   {
