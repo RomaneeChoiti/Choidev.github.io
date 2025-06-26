@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Choidev.github.io/static/css/main.243919d2.css",
-    "main.js": "/Choidev.github.io/static/js/main.c4da99bc.js",
+    "main.css": "/Choidev.github.io/static/css/main.789bdebf.css",
+    "main.js": "/Choidev.github.io/static/js/main.9bea7945.js",
     "static/media/recoding.mp4": "/Choidev.github.io/static/media/recoding.cb1c21a814f94d9d3e76.mp4",
     "static/media/pattern.mp4": "/Choidev.github.io/static/media/pattern.f8056eac5ce44e6cbb6b.mp4",
     "static/media/choi.png": "/Choidev.github.io/static/media/choi.0f2efa27948de4cfabf6.png",
@@ -29,11 +29,11 @@
     "static/media/Notion-logo.png": "/Choidev.github.io/static/media/Notion-logo.35f5f4c2ffc2f081d2cc.png",
     "static/media/git.png": "/Choidev.github.io/static/media/git.82156e0c9c2d8763d30b.png",
     "index.html": "/Choidev.github.io/index.html",
-    "main.243919d2.css.map": "/Choidev.github.io/static/css/main.243919d2.css.map",
-    "main.c4da99bc.js.map": "/Choidev.github.io/static/js/main.c4da99bc.js.map"
+    "main.789bdebf.css.map": "/Choidev.github.io/static/css/main.789bdebf.css.map",
+    "main.9bea7945.js.map": "/Choidev.github.io/static/js/main.9bea7945.js.map"
   },
   "entrypoints": [
-    "static/css/main.243919d2.css",
-    "static/js/main.c4da99bc.js"
+    "static/css/main.789bdebf.css",
+    "static/js/main.9bea7945.js"
   ]
 }
