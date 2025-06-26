@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import DarkModeToggle from "./DarkModeToggle";
+
 import "../css/Navbar.css";
 
 function Navbar() {
@@ -18,6 +20,9 @@ function Navbar() {
           <Link to="/blog">Blog</Link>
         </li>
       </ul>
+      <div style={{ marginTop: "1rem" }}>
+        <DarkModeToggle />
+      </div>
     </nav>
   );
 }

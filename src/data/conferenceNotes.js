@@ -9,7 +9,7 @@ const conferencenotes = [
     id: "post4",
     title:
       "선물하기 프론트엔드 성능 개선기 / if(kakaoAI)2024, 기술 컨퍼런스(1편)",
-    date: "2024/??/??",
+    date: "2024/10/11",
     link: "/conferencenotes/post3",
     content: markdownToHtml(post4Content), // Markdown을 HTML로 변환
   },
