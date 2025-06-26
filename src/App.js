@@ -2,10 +2,10 @@ import "./css/App.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home.js";
 import Works from "./pages/Works.js";
-import Blog from "./pages/Blog.js";
+import Blog from "./pages/BlogCard.js";
 import Navbar from "./components/Navbar.js";
 import ProjectDetail from "./pages/ProjectDetail.js";
-import DynamicPostPage from "./components/DynamicPostPage.js";
+import DynamicPostPage from "./components/Post/DynamicPostPage.js";
 
 function App() {
   return (
@@ -19,7 +19,7 @@ function App() {
             <Route path="/works/:projectId" element={<ProjectDetail />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/:type" element={<DynamicPostPage />} />
-            <Route path="/:type/:postId" element={<DynamicPostPage />} />{" "}
+            <Route path="/:type/:postId" element={<DynamicPostPage />} />
           </Routes>
         </div>
       </div>

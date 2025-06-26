@@ -1,4 +1,4 @@
-const blogpost2Content = `
+const post_2 = `
 이 프로젝트는 FaceAPI를 활용해 얼굴의 움직임을 추적하고, 이를 기반으로 애니메이션 효과를 생성하는 재미있는 시각적 경험을 제공합니다.  
 사용자의 얼굴 움직임에 따라 물방울 형태의 객체(WaterBlob)가 동적으로 반응하며, 반지름과 색상이 변화합니다.
 
@@ -99,4 +99,4 @@ FaceAPI와 p5.js의 조합은 다음과 같은 장점을 제공합니다.
 GitHub 저장소: [shattered-visage 프로젝트 보기](https://github.com/RomaneeChoiti/shattered-visage)
 `;
 
-export default blogpost2Content;
+export default post_2;

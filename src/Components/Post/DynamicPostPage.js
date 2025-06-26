@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import PostPage from "./Post/PostPage";
+import PostPage from "./PostPage";
 
 function DynamicPostPage() {
   const { type, postId } = useParams();
@@ -9,13 +9,13 @@ function DynamicPostPage() {
   const normalizedType = type?.toLowerCase();
 
   useEffect(() => {
-    const validTypes = ["gitblog", "conferencenotes"];
+    const validTypes = ["gitblog", "conferencenotes", "backendnotes", "frontendnotes", "hnsskillnotes"];
     if (type && !validTypes.includes(normalizedType)) {
       navigate(`/${normalizedType}`, { replace: true });
     }
   }, [type, normalizedType, navigate]);
 
-  const validTypes = ["gitblog", "conferencenotes"];
+  const validTypes = ["gitblog", "conferencenotes", "backendnotes", "frontendnotes", "hnsskillnotes"];
   if (!validTypes.includes(normalizedType)) {
     return <p>Page not found. Please check the URL.</p>;
   }

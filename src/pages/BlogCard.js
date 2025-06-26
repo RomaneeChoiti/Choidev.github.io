@@ -1,15 +1,14 @@
-import React from "react";
 import styles from "../css/Blog.module.css";
-import blogs from "../data/blogs";
 import Card from "../components/Card";
 import { useNavigate } from "react-router-dom";
+import blogs from "./Blogs";
 
 function Blog() {
   const navigate = useNavigate();
 
   const handleBlogClick = (link, id) => {
     if (id === "gitblog") {
-      navigate("/gitblog");
+      navigate("/");
     } else {
       window.open(link, "_blank", "noopener,noreferrer");
     }

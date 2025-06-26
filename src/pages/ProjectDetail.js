@@ -1,4 +1,3 @@
-import React from "react";
 import { useParams } from "react-router-dom";
 import styles from "../css/ProjectDetail.module.css";
 import projects from "../data/projects";

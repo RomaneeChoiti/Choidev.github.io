@@ -17,7 +17,15 @@ function Navbar() {
           <Link to="/ConferenceNotes">Conference Notes</Link>
         </li>
         <li>
-          <Link to="/blog">Blog</Link>
+          <Link to="/FrontendNotes">Frontend Notes</Link>
+        </li>
+        <li>
+          <Link to="/BackendNotes">Backend Notes</Link>
+        </li><li>
+          <Link to="/HnSSkillNotes">HnS Skill Notes</Link>
+        </li>
+        <li>
+          <Link to="/blog">Blogs</Link>
         </li>
       </ul>
       <div style={{ marginTop: "1rem" }}>

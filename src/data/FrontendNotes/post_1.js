@@ -1,4 +1,4 @@
-const blogpost1Content = `
+const post_1 = `
 React 애플리케이션을 GitHub Pages에 배포할 때, 종종 라우팅 문제가 발생합니다.  
 특히, 페이지를 새로고침하거나 특정 URL로 직접 접근할 때 "404 페이지"가 뜨는  
 현상이 나타납니다. 이번 글에서는 이러한 문제의 원인과 해결 방법을 다루고자 합니다.
@@ -86,4 +86,4 @@ GitHub Pages에서 React 애플리케이션을 문제없이 배포하기 위해�
 이번 글을 통해 GitHub Pages와 React Router를 함께 사용하는 방법을 이해하고, 더 나은 배포 환경을 구축해보세요.
 `;
 
-export default blogpost1Content;
+export default post_1;
