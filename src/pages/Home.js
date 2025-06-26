@@ -24,11 +24,7 @@ function Home() {
         예술 분야에서는 p5.js를 활용하여 창작 활동을 하고 있습니다. 
         <br />
         <br />
-        Works 섹션에서는 진행한 프로젝트와 사용 기술들을 소개합니다.
-        <br /> Blog 섹션에서는 문제 해결 방법과 개발 사례를 공유합니다. 
-        <br /> Conference Notes 섹션에서는 컨퍼런스와 세미나에서 얻은 지식을
-        바탕으로 메모하고 정리한 내용을 제공합니다.
-        <br />
+        사용 중에 블로그들을 해당 블로그에 정리하고 있는 중입니다.
         <br />
         <a href="mailto:choidevmail@gmail.com" className={styles.email}>
           choidevmail@gmail.com
