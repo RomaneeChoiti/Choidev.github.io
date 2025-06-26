@@ -19,7 +19,6 @@
 .title {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #333;
   text-align: left;
 }
 
@@ -36,7 +35,6 @@
   margin: 2rem auto;
   max-width: 800px;
   text-align: justify;
-  color: #555;
 }
 
 .link {
@@ -76,4 +74,24 @@
     padding: 0 1rem;
     text-align: center;
   }
+}
+
+body.dark-mode .container {
+  color: #ffffff;
+}
+
+body.dark-mode .link {
+  color: #bb86fc;
+}
+
+body.dark-mode .email {
+  color: #bb86fc;
+}
+
+body.dark-mode .title {
+  color: #ffffff;
+}
+
+body.dark-mode .content {
+  color: #ffffff;
 }
