@@ -49,16 +49,22 @@ function ProjectDetail() {
 
       <Slider {...sliderSettings} className={styles.imageGallery}>
         {project.images.map((img, index) => {
-          const isWide = new Image();
-          isWide.src = img;
-          const wideClass = isWide.width > isWide.height ? styles.wide : '';
+          const handleImageLoad = (event) => {
+            const imgElement = event.target;
+            if (imgElement.naturalWidth > imgElement.naturalHeight) {
+              imgElement.classList.add(styles.wide);
+            } else {
+              imgElement.classList.remove(styles.wide);
+            }
+          };
 
           return (
             <div key={index} className={styles.sliderItem}>
               <img
                 src={img}
                 alt={`${project.title} screenshot ${index + 1}`}
-                className={`${styles.galleryImage} ${wideClass}`}
+                className={styles.galleryImage}
+                onLoad={handleImageLoad}
               />
             </div>
           );
