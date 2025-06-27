@@ -1,7 +1,6 @@
 .container {
   max-width: 800px;
   margin: 0 auto;
-  padding: 2rem;
 }
 .flexContainer {
   display: flex;
@@ -48,6 +47,8 @@
   flex-wrap: wrap;
   gap: 1rem;
   margin: 1rem 0;
+  background-color: #68686824;
+  padding: 1rem;
 }
 
 /* 기본적으로 3개의 이미지를 한 줄에 배치 */
@@ -57,10 +58,20 @@
   height: auto;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%; /* Make the image fill the entire slider item */
+  display: block;
+  margin: 0 auto; /* Center the image horizontally */
+  object-fit: cover; /* 이미지가 잘리지 않도록 설정 */
 }
 
 /* Web 플랫폼일 때의 설정: 1개의 이미지를 한 줄에 배치 */
 .platformWeb .galleryImage {
+  flex: 1 1 100%; /* 전체 너비를 차지하도록 설정 */
+  max-width: 100%;
+}
+
+/* 가로가 세로보다 큰 경우 */
+.galleryImage.wide {
   flex: 1 1 100%; /* 전체 너비를 차지하도록 설정 */
   max-width: 100%;
 }
