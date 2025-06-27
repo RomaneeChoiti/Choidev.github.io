@@ -1,9 +1,8 @@
 // src/pages/Work.js
-import React from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "../css/Work.module.css";
-import projects from "../data/projects";
 import Card from "../components/Card";
+import projects from "../data/projects";
 
 function Work() {
   const navigate = useNavigate();

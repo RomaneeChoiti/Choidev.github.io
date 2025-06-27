@@ -115,6 +115,14 @@ function ProjectDetail() {
           </a>
         </>
       )}
+      {project.downLoadLink && (
+        <>
+          &nbsp;
+          <a href={project.downLoadLink} target="_blank" rel="noopener noreferrer">
+            [ App Store ]
+          </a>
+        </>
+      )}
     </div>
   );
 }
