@@ -4,7 +4,7 @@ import Home from "./pages/Home.js";
 import Works from "./pages/Works.js";
 import Blog from "./pages/BlogCard.js";
 import Navbar from "./components/Navbar.js";
-import ProjectDetail from "./pages/ProjectDetail.js";
+import ProjectDetail from "./pages/ProjectDetailPage.js";
 import DynamicPostPage from "./components/Post/DynamicPostPage.js";
 
 function App() {

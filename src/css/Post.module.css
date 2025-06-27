@@ -79,3 +79,9 @@
   margin-top: 4rem;
   margin-bottom: 0.5rem;
 }
+
+/* Add active class for highlighted table of contents item */
+.active {
+  color: #007bff; /* Highlight color */
+  font-weight: bold;
+}

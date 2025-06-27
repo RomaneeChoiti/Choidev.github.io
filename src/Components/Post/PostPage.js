@@ -5,6 +5,7 @@ import conferencenotes from "../../pages/ConferenceNotes";
 import backendnotes from "../../pages/BackendNotes";
 import frontendnotes from "../../pages/FrontendNotes";
 import hnsskillnotes from "../../pages/HnSskillNotes";
+import TableOfContents from "./TableOfContents";
 
 function PostPage({ type, postId }) {
   const navigate = useNavigate();
@@ -30,15 +31,38 @@ function PostPage({ type, postId }) {
     navigate(`/${type}/${id}`, { replace: false });
   };
 
+  const extractHeadings = (content) => {
+    const headingRegex = /<h[1-6][^>]*>(.*?)<\/h[1-6]>/g;
+    const headings = [];
+    let match;
+
+    while ((match = headingRegex.exec(content)) !== null) {
+      headings.push({ id: `heading-${headings.length}`, text: match[1].trim() });
+    }
+
+    return headings;
+  };
+
   if (post) {
+    const headings = extractHeadings(post.content);
+
+    const contentWithIds = post.content.replace(
+      /<h([1-6])([^>]*)>(.*?)<\/h\1>/g,
+      (match, level, attrs, text, index) =>
+        `<h${level} id="heading-${index}" data-heading>${text}</h${level}>`
+    );
+
     return (
-      <div className={styles.container}>
-        <h1>{post.title}</h1>
-        <p className={styles.date}>{post.date}</p>
-        <div
-          className={styles.content}
-          dangerouslySetInnerHTML={{ __html: post.content }}
-        />
+      <div className={styles.container} style={{ display: "flex", gap: "1rem" }}>
+        <main className={styles.mainContent} style={{ flex: "1" }}>
+          <h1>{post.title}</h1>
+          <p className={styles.date}>{post.date}</p>
+          <div
+            className={styles.content}
+            dangerouslySetInnerHTML={{ __html: contentWithIds }}
+          />
+        </main>
+        <TableOfContents headings={headings} />
       </div>
     );
   }

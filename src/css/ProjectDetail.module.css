@@ -59,7 +59,7 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Web 플랫폼일 때의 설정: 2개의 이미지를 한 줄에 배치 */
+/* Web 플랫폼일 때의 설정: 1개의 이미지를 한 줄에 배치 */
 .platformWeb .galleryImage {
   flex: 1 1 100%; /* 전체 너비를 차지하도록 설정 */
   max-width: 100%;
@@ -159,4 +159,12 @@ body.dark-mode ul {
 
 body.dark-mode li {
   color: #f9f9f9;
+}
+
+/* react-slick 슬라이더 이미지 스타일 */
+.slick-slide img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
 }
