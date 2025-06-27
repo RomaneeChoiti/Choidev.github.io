@@ -2,6 +2,9 @@ import { useParams } from "react-router-dom";
 import styles from "../css/ProjectDetail.module.css";
 import projects from "../data/projects";
 import VideoRenderer from "../components/VideoRenderer";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 function ProjectDetail() {
   const { projectId } = useParams();
@@ -10,6 +13,24 @@ function ProjectDetail() {
   if (!project) {
     return <p>Project not found.</p>;
   }
+
+  const sliderSettings = {
+    dots: false, // Remove the dots indicator
+    infinite: false,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false, // Hide the navigation arrows
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
 
   const renderList = (items, renderFn) =>
     items.map((item, index) => renderFn(item, index));
@@ -26,20 +47,23 @@ function ProjectDetail() {
         </div>
       </div>
 
-      <div
-        className={`${styles.imageGallery} ${
-          project.platform.includes("Web") ? styles.platformWeb : ""
-        }`}
-      >
-        {renderList(project.images, (img, index) => (
-          <img
-            key={index}
-            src={img}
-            alt={`${project.title} screenshot ${index + 1}`}
-            className={styles.galleryImage}
-          />
-        ))}
-      </div>
+      <Slider {...sliderSettings} className={styles.imageGallery}>
+        {project.images.map((img, index) => {
+          const isWide = new Image();
+          isWide.src = img;
+          const wideClass = isWide.width > isWide.height ? styles.wide : '';
+
+          return (
+            <div key={index} className={styles.sliderItem}>
+              <img
+                src={img}
+                alt={`${project.title} screenshot ${index + 1}`}
+                className={`${styles.galleryImage} ${wideClass}`}
+              />
+            </div>
+          );
+        })}
+      </Slider>
 
       {project.video && (
         <div className={styles.videoContainer}>
