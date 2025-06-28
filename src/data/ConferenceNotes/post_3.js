@@ -1,4 +1,8 @@
-const post3Content = `
+const post_3 = {
+  id: "post3",
+  title: "07/08 [컨퍼런스] 토스 SLASH23 - toss가 wed에서 React Native로 바꿔야만 했던 이유 (2편)",
+  date: "2023/07/08",
+  content: `
 SLASH 컨퍼런스에서 발표된 내용을 정리해본 글입니다. 토스는 여러 개의 서비스를 독립적으로 운영하고 있고, 각 서비스가 따로 빌드되고 배포되는 구조를 가지고 있다. 이런 구조 속에서 React Native를 도입하면서 어떤 어려움이 있었고, 어떻게 해결했는지를 중심으로 다뤄졌다.
 
 특히, React Native의 JS 파일 용량이 서비스당 약 3MB 정도 되는데, iOS(150MB)와 Android(100MB)의 앱 다운로드 제한을 고려했을 때 번들 최적화는 필수였다. 이 문제를 해결하기 위해 어떤 전략을 썼는지 인상 깊었다.
@@ -32,6 +36,6 @@ SLASH 컨퍼런스에서 발표된 내용을 정리해본 글입니다. 토스�
 React Native 도입 과정에서 토스가 어떤 고민을 했고, 어떻게 구조를 최적화했는지 잘 정리된 발표였다. 특히 JS 파일을 효과적으로 분리하고 로딩 구조를 설계한 방식이 인상 깊었다.
 
 참고 링크: [SLASH21 영상 보기](https://www.youtube.com/watch?v=EP7g5R-7zwM&t=584s)
-`;
+`};
 
-export default post3Content;
+export default post_3;

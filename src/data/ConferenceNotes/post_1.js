@@ -1,4 +1,8 @@
-const post1Content = `
+const post_1 = {
+  id: "post1",
+  title: "06/24 [세미나] - DEVOCEAN, 29회차 Tech 세미나 “웹 프론트엔드 성능 최적화 방법 및 적용 사례”",
+  date: "2023/06/24",
+  content: `
 #### 최적화가 왜 중요한가?
 
 서비스 측면, 로딩 시간이 길수록 서비스 이탈률 증가 (한국: 2초, 미국/유럽: 3초)  
@@ -34,6 +38,6 @@ Core Web Vitals (CWV) - 2020, Google에서 발표한 사용자 관점에서 정�
 3. FID:
    - 긴 JavaScript 태스크를 쪼개어 작은 태스크로 나누어 처리.
    - 불필요한 JS 코드를 줄이고, 크롬 개발 도구로 최적화 확인.
-`;
+`};
 
-export default post1Content;
+export default post_1;
