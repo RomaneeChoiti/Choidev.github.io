@@ -1,4 +1,8 @@
-const post_1 = `
+const post_1 = {
+  id: "post1",
+  title: "React Router와 GitHub Pages에서 발생하는 라우팅 문제 해결하기",
+  date: "2024/10/22",
+  content: `
 React 애플리케이션을 GitHub Pages에 배포할 때, 종종 라우팅 문제가 발생합니다.  
 특히, 페이지를 새로고침하거나 특정 URL로 직접 접근할 때 "404 페이지"가 뜨는  
 현상이 나타납니다. 이번 글에서는 이러한 문제의 원인과 해결 방법을 다루고자 합니다.
@@ -84,6 +88,6 @@ GitHub Pages에서 React 애플리케이션을 문제없이 배포하기 위해�
 \`basename\` 설정, \`404.html\` 파일 추가, 그리고 \`homepage\` 설정을 통해  
 경로 문제를 해결할 수 있으며, 이를 통해 모든 경로가 올바르게 작동하도록 구성할 수 있습니다.  
 이번 글을 통해 GitHub Pages와 React Router를 함께 사용하는 방법을 이해하고, 더 나은 배포 환경을 구축해보세요.
-`;
+`};
 
 export default post_1;
