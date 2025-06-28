@@ -3,6 +3,7 @@ import styles from "../../css/Post.module.css";
 
 function TableOfContents({ headings }) {
   const [activeHeading, setActiveHeading] = useState(null);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   useEffect(() => {
     const handleIntersection = (entries) => {
@@ -21,11 +22,19 @@ function TableOfContents({ headings }) {
     });
 
     const headingElements = document.querySelectorAll("[data-heading]");
-    console.log("Heading elements:", headingElements); // Debugging message
     headingElements.forEach((element) => observer.observe(element));
 
     return () => {
       headingElements.forEach((element) => observer.unobserve(element));
+    };
+  }, []);
+
+  useEffect(() => {
+    const handleResize = () => setWindowWidth(window.innerWidth);
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
     };
   }, []);
 
@@ -35,20 +44,25 @@ function TableOfContents({ headings }) {
       style={{
         position: "fixed", // Persistent positioning
         bottom: "1rem", // Positioned at the bottom of the screen
-        right: window.innerWidth > 1400 ? "1rem" : "auto", // Adjust position based on screen width
-        left: window.innerWidth <= 1400 ? "1rem" : "auto", // Adjust position based on screen width
+        right: windowWidth > 1400 ? "1rem" : "auto", // Adjust position based on screen width
+        left: windowWidth <= 1400 ? "1rem" : "auto", // Adjust position based on screen width
         width: "20%",
         backgroundColor:
-          window.innerWidth <= 1020
+          windowWidth <= 1020
             ? "rgba(249, 249, 249, 0)" // Fully transparent on mobile
-            : "rgba(249, 249, 249, 0.4)", // Semi-transparent on larger screens
-        boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
+            : "rgba(249, 249, 249, 0.07)", // Semi-transparent on larger screens
         zIndex: 1000,
         overflowY: "auto",
         maxHeight: "calc(50vh - 2rem)", // Adjusted height for better visibility
         borderRadius: "8px", // Added rounded corners for better aesthetics
+        padding: "1rem", // Added padding for better spacing
+        visibility: windowWidth <= 1020 ? "hidden" : "visible", // 목차 숨기기 조건 추가
+        opacity: windowWidth <= 1020 ? 0 : 1, // 투명도 조정
+        transition: "opacity 0.3s ease", // 부드러운 전환 효과 추가
+        display: windowWidth <= 1020 ? "none" : "block", // 상태 기반으로 display 설정
       }}
     >
+      <h4>목차</h4>
       {headings.length > 0 ? (
         <ul>
           {headings.map((heading, index) => (
