@@ -1,5 +1,11 @@
-import { loadNotes } from "../utils/loadNotes";
+import { loadNotesWithoutRequireContext } from "../utils/loadNotesWithoutRequireContext";
 
-const FrontendNotes = loadNotes("../data/FrontendNotes", /post_\d+\.js$/);
+const requireContext = require.context("../data/FrontendNotes", false, /post_.*\.js$/);
+const files = {};
+requireContext.keys().forEach((key) => {
+  files[key] = requireContext(key).default;
+});
+
+const FrontendNotes = loadNotesWithoutRequireContext(files);
 
 export default FrontendNotes;

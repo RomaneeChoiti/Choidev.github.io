@@ -21,7 +21,10 @@ function PostPage({ type, postId }) {
       ? hnsskillnotes
       : [];
 
-  const sortedData = data.sort((a, b) => new Date(b.date) - new Date(a.date));
+  // Ensure data is always an array
+  const validData = Array.isArray(data) ? data : [];
+
+  const sortedData = validData.sort((a, b) => new Date(b.date) - new Date(a.date));
 
   const post = postId ? sortedData.find((p) => p.id === postId) : null;
 
@@ -83,7 +86,7 @@ function PostPage({ type, postId }) {
           : "Past Notes"}
       </h2>
       <ul className={styles.postList}>
-        {data.map((post) => (
+        {validData.map((post) => (
           <li
             key={post.id}
             className={styles.postItem}
