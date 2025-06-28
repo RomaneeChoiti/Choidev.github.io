@@ -21,7 +21,9 @@ function PostPage({ type, postId }) {
       ? hnsskillnotes
       : [];
 
-  const post = postId ? data.find((p) => p.id === postId) : null;
+  const sortedData = data.sort((a, b) => new Date(b.date) - new Date(a.date));
+
+  const post = postId ? sortedData.find((p) => p.id === postId) : null;
 
   if (postId && !post) {
     return <p>Post not found.</p>;
