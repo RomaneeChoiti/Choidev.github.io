@@ -1,7 +1,7 @@
 import styles from "../css/Blog.module.css";
 import Card from "../components/Card";
 import { useNavigate } from "react-router-dom";
-import blogs from "./Blogs";
+import blogs from "../data/Blogs/Blogs.js";
 
 function Blog() {
   const navigate = useNavigate();

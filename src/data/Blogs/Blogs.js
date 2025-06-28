@@ -1,8 +1,8 @@
 // src/data/blogs.js
-import Blogger from "../assets/images/blog/Blogger_icon.png";
-import Notion from "../assets/images/blog/Notion-logo.png";
-import velog from "../assets/images/blog/velog.png";
-import git from "../assets/images/blog/git.png";
+import Blogger from "../../assets/images/blog/Blogger_icon.png";
+import Notion from "../../assets/images/blog/Notion-logo.png";
+import velog from "../../assets/images/blog/velog.png";
+import git from "../../assets/images/blog/git.png";
 
 const blogs = [
   {
