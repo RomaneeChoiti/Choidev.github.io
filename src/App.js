@@ -6,10 +6,12 @@ import Blog from "./pages/BlogCard.js";
 import Navbar from "./components/Navbar.js";
 import ProjectDetail from "./pages/ProjectDetailPage.js";
 import DynamicPostPage from "./components/Post/DynamicPostPage.js";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
     <Router basename={process.env.PUBLIC_URL}>
+      <ScrollToTop />
       <div className="container">
         <Navbar />
         <div className="main-content">
