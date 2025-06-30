@@ -1,25 +1,20 @@
 const post_2 = {
   id: "post2",
-  title: "07/02 [컨퍼런스] 토스 SLASH23 - toss가 wed에서 React Native로 바꿔야만 했던 이유 (1편)",
+  title: "07/02 [컨퍼런스] 토스 SLASH23 - WedView와 React Native (1편)",
   date: "2023/07/02",
   content: `
-## 토스가 wed에서 React Native로 바꿔야만 했던 이유
-토스는 SLASH23 컨퍼런스에서 wed 플랫폼에서 React Native로 전환해야 했던 이유를 설명했습니다.
 
----
-
-
-### Wed vs React Native
+### WedView vs React Native
 
 - **사용자 평균 화면 로딩 시간:**
   - Wed: 3.5초
   - React Native: 0.x초
 
 ### React Native가 로딩이 빠른 이유
-Wed에서는 HTML, JS 다운로드, JS 실행이 모두 필요하지만, React Native에서는 JS만 실행합니다.
+WedView에서 HTML, JS 다운로드, JS 실행이 모두 필요하지만, React Native에서는 JS만 실행합니다.
 
 
-#### Wed
+#### WedView
 SSR Server 비용이 발생합니다.  
 toss Wed <-> SSR server <-> API server로 연결되어 있어 높은 비용과 서버 오류 대응, 변동 트래픽 대응이 필요합니다.
 
