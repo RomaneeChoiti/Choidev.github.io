@@ -36,3 +36,23 @@
   color: #777;
 }
 
+.skeleton {
+  width: 100%; /* Skeleton width matches image width */
+  height: 200px; /* Adjust height as needed */
+  background-color: #e0e0e0; /* Skeleton color */
+  border-radius: 8px; /* Optional: match image border radius */
+  animation: pulse 1.5s infinite; /* Add a pulsing effect */
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+

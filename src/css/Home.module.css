@@ -59,6 +59,27 @@
   text-decoration: underline;
 }
 
+.skeleton {
+  width: 150px; /* Skeleton width */
+  height: 150px; /* Skeleton height */
+  background-color: #e0e0e0; /* Skeleton color */
+  border-radius: 50%; /* Make it circular */
+  animation: pulse 1.5s infinite; /* Add a pulsing effect */
+  margin: 0 auto; /* Center the skeleton */
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 @media (max-width: 768px) {
   .header {
     flex-direction: column;
