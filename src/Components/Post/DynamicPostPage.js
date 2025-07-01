@@ -9,13 +9,13 @@ function DynamicPostPage() {
   const normalizedType = type?.toLowerCase();
 
   useEffect(() => {
-    const validTypes = ["gitblog", "conferencenotes", "backendnotes", "frontendnotes", "hnsskillnotes"];
+    const validTypes = ["gitblog", "conferencenotes", "backendnotes", "frontendnotes", "hnsskillnotes", "comedynotes"];
     if (type && !validTypes.includes(normalizedType)) {
       navigate(`/${normalizedType}`, { replace: true });
     }
   }, [type, normalizedType, navigate]);
 
-  const validTypes = ["gitblog", "conferencenotes", "backendnotes", "frontendnotes", "hnsskillnotes"];
+  const validTypes = ["gitblog", "conferencenotes", "backendnotes", "frontendnotes", "hnsskillnotes", "comedynotes"];
   if (!validTypes.includes(normalizedType)) {
     return <p>Page not found. Please check the URL.</p>;
   }
