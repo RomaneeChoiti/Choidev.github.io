@@ -6,6 +6,7 @@ import backendnotes from "../../pages/BackendNotes";
 import frontendnotes from "../../pages/FrontendNotes";
 import hnsskillnotes from "../../pages/HnSskillNotes";
 import TableOfContents from "./TableOfContents";
+import ComedyNotes from "../../pages/ComedyNotes";
 
 function PostPage({ type, postId }) {
   const navigate = useNavigate();
@@ -19,6 +20,8 @@ function PostPage({ type, postId }) {
       ? frontendnotes
       : type === "hnsskillnotes"
       ? hnsskillnotes
+      : type === "comedynotes"
+      ? ComedyNotes
       : [];
 
   // Ensure data is always an array
