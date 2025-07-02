@@ -1,8 +1,13 @@
+import bridgingHeaderDiagram from "../../assets/images/postImgs/9geAn.png";
+
 const post_3 = {
   id: "post3",
   title: "Bridging-Header란?",
   date: "2025/06/28",
   content: `
+<img src="${bridgingHeaderDiagram}" alt="Bridging Header Diagram" style="width: 100%; max-width: 600px; height: auto;" />
+
+예시 이미지
 ### Bridging-Header란?
 **Swift 코드에서 Objective-C 헤더 파일을 불러와 사용할 수 있도록 해주는 다리(bridge)** 역할을 하는 것
 
