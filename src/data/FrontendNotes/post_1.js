@@ -1,8 +1,14 @@
+import reactngit from "../../assets/images/postImgs/reactngit.webp";
+
 const post_1 = {
   id: "post1",
   title: "React Router와 GitHub Pages에서 발생하는 라우팅 문제 해결하기",
   date: "2024/10/22",
   content: `
+<img src="${reactngit}" alt="Bridging Header Diagram" style="width: 100%; max-width: 600px; height: auto;" />
+<br />
+<br />
+
 React 애플리케이션을 GitHub Pages에 배포할 때, 종종 라우팅 문제가 발생합니다.  
 특히, 페이지를 새로고침하거나 특정 URL로 직접 접근할 때 "404 페이지"가 뜨는  
 현상이 나타납니다. 이번 글에서는 이러한 문제의 원인과 해결 방법을 다루고자 합니다.
