@@ -7,6 +7,7 @@ import frontendnotes from "../../pages/FrontendNotes";
 import hnsskillnotes from "../../pages/HnSskillNotes";
 import TableOfContents from "./TableOfContents";
 import ComedyNotes from "../../pages/ComedyNotes";
+import DevOpsNotes from "../../pages/DevOpsNotes"; // Import DevOpsNotes
 
 function PostPage({ type, postId }) {
   const navigate = useNavigate();
@@ -20,6 +21,8 @@ function PostPage({ type, postId }) {
       ? frontendnotes
       : type === "hnsskillnotes"
       ? hnsskillnotes
+      : type === "devopsnotes"
+      ? DevOpsNotes
       : type === "comedynotes"
       ? ComedyNotes
       : [];
@@ -85,8 +88,13 @@ function PostPage({ type, postId }) {
           : type === "frontendnotes"
           ? "Frontend Notes"
           : type === "hnsskillnotes"
-          ? "HnS Skill Notes"
-          : "Past Notes"}
+          ? "Hard and Soft Skill Notes"
+          : type === "devopsnotes"
+          ? "DevOps Notes"
+          : type === "comedynotes"
+          ? "Comedy Notes"
+          : "Past Notes"
+        }
       </h2>
       <ul className={styles.postList}>
         {validData.map((post) => (

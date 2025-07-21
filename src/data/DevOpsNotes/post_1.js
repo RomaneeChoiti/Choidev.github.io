@@ -1,4 +1,4 @@
-const post_3 = {
+const post_1 = {
     id: "post3",
     title: "AWS 계정 간 이전 정리 – 스냅샷(Snapshot) 및 탄력적 IP 주의사항",
     date: "2025/07/05",
@@ -44,4 +44,4 @@ const post_3 = {
 `
 }
 
-export default post_3;
+export default post_1;
