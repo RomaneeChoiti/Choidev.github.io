@@ -1,4 +1,4 @@
-const post_4 = {
+const post_2 = {
     id: "post4",
     title: "React Native iOS 환경 변수 (.env.prod) 적용 및 Xcode 빌드 설정",
     date: "2025/07/14",
@@ -107,4 +107,4 @@ Xcode에서 Clean 후 빌드가 성공적으로 완료되며, 더 이상 Generat
 `
 }
 
-export default post_4;
+export default post_2;

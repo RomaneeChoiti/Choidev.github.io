@@ -14,16 +14,19 @@ function Navbar() {
           <Link to="/works">Works</Link>
         </li>
         <li>
-          <Link to="/ConferenceNotes">Conference Notes</Link>
+          <Link to="/FrontendNotes">Frontend</Link>
         </li>
         <li>
-          <Link to="/FrontendNotes">Frontend Notes</Link>
+          <Link to="/BackendNotes">Backend</Link>
         </li>
         <li>
-          <Link to="/BackendNotes">Backend Notes</Link>
+          <Link to="/DevOpsNotes">DevOps</Link>
         </li>
         <li>
-          <Link to="/HnSSkillNotes">HnS Skill Notes</Link>
+          <Link to="/ConferenceNotes">Conference</Link>
+        </li>
+        <li>
+          <Link to="/HnSSkillNotes">Hard x Soft</Link>
         </li>
         <li>
           {/* <Link to="/ComedyNotes">Comedy Notes</Link> */}
