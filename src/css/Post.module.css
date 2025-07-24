@@ -8,11 +8,9 @@
 }
 
 
-.date,
-.postDate {
+.date {
   font-size: 0.9rem;
   color: #777;
-  margin-bottom: 1.5rem;
 }
 
 .content ul {
@@ -55,7 +53,7 @@
 
 .postItem {
   border-bottom: 1px solid #ddd;
-  padding: 1rem 0;
+  padding: 0.5rem 0;
   list-style: none;
 }
 
@@ -67,6 +65,24 @@
 
 .readMore:hover {
   text-decoration: underline;
+}
+
+.postTitle {
+  margin: 0%;
+  font-size: 1.3rem;
+  transition: color 0.7s ease;
+}
+
+.postTitle:hover {
+  color: #ff6347;;
+}
+
+.postMeta{
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+  color: #777;
+  gap: 1rem;
 }
 
 .postList {

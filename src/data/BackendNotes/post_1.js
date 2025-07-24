@@ -1,207 +1,43 @@
+import img1 from "../../assets/images/postImgs/CleanArchitecture.jpg";
+
 const post_1 = {
   id: "post1",
-  title: "EC2 ↔ RDS(PostgreSQL) 연결 문제 해결 정리",
-  date: "2025/05/28",
+  title: "The Clean Architecture - 1",
+  date: "2025/01/20",
   content: `
 
-## 에러 메시지
+<img src="${img1}" alt="Bridging Header Diagram" style="width: 100%; max-width: 600px; height: auto;" />
+
+(출처: [Clean Architecture](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html))
+
+# Clean Architecture란?
+시스템 아키텍처에 대한 개념은 여럿 제시해있고 디테일하게 다르지만 공통적으로 관심사의 분리(Separation of Concerns)를 강조합니다.
+Clean Architecture는 시스템을 계층화하여 관심사를 분리하고, 각 계층이 서로 독립적으로 변경될 수 있도록 설계하는 아키텍처 패턴입니다.
+
+## Clean Architecture - 관심사의 분리(Separation of Concerns)
+Clean Architecture는 시스템을 다음과 같은 계층으로 나누어 관심사를 분리합니다
+- **Entities**: 비즈니스 규칙과 엔티티를 정의합니다. 이 계층은 시스템의 핵심 로직을 포함하며, 다른 계층에 의존하지 않습니다.
+- **Use Cases**: 애플리케이션의 특정 기능을 구현합니다. 이 계층은 엔티티를 사용하여 비즈니스 로직을 수행하며, 외부 인터페이스(예: 데이터베이스, 웹 API 등)에 의존하지 않습니다.
+- **Interface Adapters**: 외부 인터페이스와 Use Cases를 연결합니다.
+  이 계층은 Use Cases를 호출하여 데이터를 가져오거나 저장하며, 외부 인터페이스의 변환을 담당합니다.
+- **Frameworks and Drivers**: 외부 프레임워크와 드라이버를 포함합니다. 이 계층은 시스템의 외부 인터페이스(예: 웹 프레임워크, 데이터베이스 드라이버 등)를 사용하여 Interface Adapters와 연결합니다.
+
+### 4개 계층보다 더 많을 수 있나?
+Clean Architecture는 계층의 수에 제한을 두지 않습니다. 필요에 따라 더 많은 계층을 추가할 수 있습니다. 
+핵심은 의존성 규칙(Dependency Rule)입니다.
+
+## Clean Architecture의 핵심 - 의존성 규칙(Dependency Rule)
+의존성(Dependency)이 반드시 안쪽(더 추상적이고, 핵심적인 정책 영역)으로만 향해야 한다는 점입니다.
+- 소스 코드의 의존성은 반드시 내부를 향해야 한다.
+(밖에서 안으로는 OK, 안에서 밖으로는 절대 안 됨)
+- 내부(Inner Circle)는 외부(Outer Circle)에 대해 아무것도 알아서는 안 된다.
+(외부의 클래스, 함수, 변수, 데이터 포맷 등 어떤 것도 내부에서 직접 사용하거나 참조하지 않는다)
+- 외부의 변화가 내부에 영향을 끼치면 안 된다.
+(예: 프레임워크가 바뀌더라도 내부의 비즈니스 로직, 정책 코드는 영향받지 않아야 한다)
+
+즉,내부는 외부에 대해 "몰라도 되고, 영향을 받지 않으며, 독립적으로 유지되어야 한다"
+이게 바로 Dependency Rule의 핵심
 
-\`\`\`
-no pg_hba.conf entry for host ...
-\`\`\`
-
-- PostgreSQL이 외부 클라이언트(예: EC2의 앱 서버)의 접근을 거부
-- 이유: 해당 클라이언트 IP, 사용자, DB에 대한 허용 규칙이 'pg_hba.conf'에 없음
-
----
-
-## 문제의 출발점: PostgreSQL 15+ SSL 정책 강화
-
-- 과거엔 SSL 없이도 접속 가능했지만,
-- PostgreSQL 15 이후부터는 **비암호화 연결을 제한**
-
-### 해결 방향
-1. **테스트 환경**: SSL 설정을 비활성화
-2. **배포 환경**: 클라이언트에서 SSL 인증서로 암호화된 연결 구성
-
----
-
-## SSL 인증서 구성
-
-### RDS CA 인증서 다운로드
-
-- AWS에서 제공하는 번들: 'ap-northeast-2-bundle.pem'
-- 개별 인증서 ('rds-ca-2019-root')를 따로 추출할 필요는 없음  
-→ PostgreSQL 클라이언트가 번들에서 적절한 CA를 자동 선택
-
-### Node.js SSL 설정
-
-\`\`\`ts
-const rdsCaCertPath = join(__dirname, '..', 'ap-northeast-2-bundle.pem');
-
-ssl: {
-  rejectUnauthorized: true,
-  ca: fs.readFileSync(rdsCaCertPath).toString(),
-}
-\`\`\`
-
-> 배포 버전에서는 dist 폴더 기준 경로로 수정 필요
-
----
-
-## dist 폴더 내 pem 복사
-
-### 'package.json' 스크립트 설정
-
-\`\`\`json
-"postbuild": "cp ap-northeast-2-bundle.pem dist/"
-\`\`\`
-
-→ 빌드 시 PEM 파일도 'dist/' 폴더에 포함되도록 함
-
----
-
-## EC2에서 RDS 접속 테스트
-
-### PostgreSQL 클라이언트 설치
-
-\`\`\`bash
-sudo apt update
-sudo apt install postgresql-client -y
-\`\`\`
-
-### psql 접속 시도
-
-\`\`\`bash
-psql "host=YOUR_RDS_ENDPOINT port=5432 user=greenwayseoul dbname=greenwayseoul-rds sslmode=require"
-\`\`\`
-
-연결되면 SSL 설정은 문제 없음
-
----
-
-## pem 키 페어 관련 설정
-
-### 1. pem 권한 조정
-
-\`\`\`bash
-chmod 400 your-key.pem
-\`\`\`
-
-### 2. EC2에 pem 복사
-
-\`\`\`bash
-scp -i ~/test/test/test/EC2.pem ~/test/test/test/RDS.pem ubuntu@<EC2_PUBLIC_IP>:~/target-directory/
-\`\`\`
-
-→ EC2 내에서 'ls'로 확인하면 추가된 pem 파일을 볼 수 있음
-
----
-
-## 보안 그룹 설정
-
-- EC2 → RDS 접속을 허용하는 **인바운드 규칙** 설정 필요 (TCP 5432)
-- RDS → EC2는 보통 아웃바운드로 자동 허용됨
-
-### 현재 보안 그룹 구성
-
-1. 'launch-wizard-1' : 포트 연결용
-2. 'rds-ec2-1' : 인바운드 보안
-3. 'ec2-rds-1' : 아웃바운드 보안
-4. 'default' : 기본 설정
-
-> 충돌은 없고, **중첩(합집합)** 으로 작동함  
-→ 인바운드만 열려 있으면 연결 가능
-
----
-
-## SSL 설정 진단을 위한 테스트
-
-SSL 설정이 문제인지 보안 문제인지 확인 위해 아래 설정:
-
-\`\`\`ts
-ssl: {
-  rejectUnauthorized: false
-}
-\`\`\`
-
-→ 연결되면 보안 문제, 아니면 SSL 인증서 문제
-
----
-
-## dist 내 pem 경로 문제 해결
-
-### 발생 에러
-\`\`\`bash
-Error: EISDIR: illegal operation on a directory, read
-\`\`\`
-
-→ 잘못된 경로로 디렉토리를 읽으려 한 경우
-
-### 해결
-
-\`\`\`ts
-const rdsCaCertPath = path.join(__dirname, 'ap-northeast-2-bundle.pem');
-\`\`\`
-
-→ '__dirname' 기준 경로를 명확하게 지정
-
----
-
-## PM2 에러 해결
-
-### 발생 에러
-\`\`\`bash
-Error: Cannot find module '/home/ubuntu/GreenWaySeoul/server/dist/main.js'
-\`\`\`
-
-### 점검 사항
-
-1. 'dist/main.js' 존재 확인
-2. 'tsconfig.json' 및 'tsconfig.build.jso'의 'outDir' 설정 확인
-3. 'npm run build' 후 'dist/' 폴더 내부 구조 확인
-
-### 스크립트 수정
-
-\`\`\`json
-"start:prod": "cross-env NODE_ENV=production pm2 start ./dist/main.js --interpreter node --name main"
-\`\`\`
-
-→ './dist/main.js' 경로를 **상대경로**로 수정하여 해결
-
----
-
-## PM2 로그 초기화
-
-### 로그 내용만 초기화
-\`\`\`bash
-npx pm2 flush
-\`\`\`
-
-### 로그 파일 전체 제거
-\`\`\`bash
-rm -rf ~/.pm2/logs/*
-\`\`\`
-
-→ 에러 로그 초기화로 문제 해결됨
-
----
-
-## 최종 점검 요약
-
-PostgreSQL의 SSL 인증서는 RDS 번들 전체를 적용해 문제를 해결함.
-psql 클라이언트로 EC2에서 RDS에 직접 접속이 정상적으로 이루어짐을 확인함.
-RDS의 보안 그룹 인바운드 설정에서 EC2의 IP가 5432 포트로 접근 가능하도록 허용함.
-배포 시, 빌드 결과물(dist/) 안에 pem 인증서를 포함하도록 postbuild 스크립트로 자동 복사하게 구성함.
-PM2 실행 문제는 파일 경로를 명확히 지정하고, 로그를 초기화하여 해결함.
-
----
-
-## 정리
-- PostgreSQL 15 이상부터 SSL 필수
-- RDS 인증서 번들 설정 필수
-- 'dist' 경로 기준으로 pem 복사 & 참조
-- 보안 그룹/PM2/log 경로 확인 필수
 `
 };
 

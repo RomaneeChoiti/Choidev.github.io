@@ -2,8 +2,8 @@ import img1 from "../../assets/images/postImgs/CleanArchitecture.jpg";
 
 const post_2 = {
   id: "post2",
-  title: "The Clean Architecture - 1",
-  date: "2025/01/20",
+  title: "Nest.js",
+  date: "2025/05/05",
   content: `
 
 <img src="${img1}" alt="Bridging Header Diagram" style="width: 100%; max-width: 600px; height: auto;" />
@@ -24,7 +24,7 @@ Clean Architecture는 시스템을 다음과 같은 계층으로 나누어 관�
 
 ### 4개 계층보다 더 많을 수 있나?
 Clean Architecture는 계층의 수에 제한을 두지 않습니다. 필요에 따라 더 많은 계층을 추가할 수 있습니다. 
-핵심은 종성석 규칙(Dependency Rule)입니다.
+핵심은 의존성 규칙(Dependency Rule)입니다.
 
 ## Clean Architecture의 핵심 - 의존성 규칙(Dependency Rule)
 의존성(Dependency)이 반드시 안쪽(더 추상적이고, 핵심적인 정책 영역)으로만 향해야 한다는 점입니다.
