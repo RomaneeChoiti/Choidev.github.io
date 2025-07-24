@@ -2,6 +2,7 @@ const post_1 = {
     id: "post1",
     title: "AWS 계정 간 이전 정리 – 스냅샷(Snapshot) 및 탄력적 IP 주의사항",
     date: "2025/07/05",
+    tags: ["DevOps", "AWS", "EC2", "RDS", "Snapshot", "탄력적 IP"],
     content: `
 ## 개요
 기존 AWS 프리 티어가 만료되었고, RDS 요금이 과도하게 발생한 상황으로 인해 다음과 같은 결정을 내림:

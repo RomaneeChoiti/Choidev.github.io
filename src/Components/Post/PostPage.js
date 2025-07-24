@@ -114,6 +114,19 @@ function PostPage({ type, postId }) {
               <p>{calculateReadingTime(post.content)} mins</p>
             </div>
             <Excerpt content={post.content} length={100} />
+            <div className={styles.tags}>
+              {post.tags && Array.isArray(post.tags) ? (
+                <ul className={styles.tagList}>
+                  {post.tags.map((tag, index) => (
+                    <l key={index} className={styles.tagItem}>
+                        {tag}
+                    </l>
+                  ))}
+                </ul>
+              ) : (
+                <p>{post.tags}</p>
+              )}
+            </div>
           </li>
         ))}
       </ul>
