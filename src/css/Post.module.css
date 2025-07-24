@@ -51,6 +51,13 @@
 
 }
 
+.pageTitle{
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #bdbdbd;
+}
+
 .postItem {
   border-bottom: 1px solid #ddd;
   padding: 0.5rem 0;
