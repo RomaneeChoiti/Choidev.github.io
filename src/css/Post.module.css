@@ -64,6 +64,24 @@
   list-style: none;
 }
 
+.tags {
+  margin-top: 0.5rem;
+  color: #bdbdbd;
+  font-size: 0.7rem; /* Reduced font size */
+}
+.tagItem{
+  font-size: 0.8rem;
+  border: 1px solid #676767;
+  border-radius: 4px;
+  padding: 0.2rem 0.5rem;
+}
+
+.tagList{
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
 .readMore {
   display: inline-block;
   font-size: 0.9rem;

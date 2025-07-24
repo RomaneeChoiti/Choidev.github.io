@@ -2,6 +2,7 @@ const post_3 = {
   id: "post3",
   title: "EC2 ↔ RDS(PostgreSQL) 연결 문제 해결 정리",
   date: "2025/05/28",
+  tags: ["DevOps", "AWS", "EC2", "RDS", "PostgreSQL", "SSL", "인증서"],
   content: `
 
 ## 에러 메시지
