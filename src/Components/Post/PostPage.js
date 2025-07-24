@@ -82,7 +82,7 @@ function PostPage({ type, postId }) {
 
   return (
     <div className={styles.container}>
-      <h2>
+      <h2 className={styles.pageTitle}>
         {type === "conferencenotes"
           ? "Conference Notes"
           : type === "backendnotes"
