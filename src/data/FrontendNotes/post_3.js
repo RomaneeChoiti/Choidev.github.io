@@ -4,6 +4,7 @@ const post_3 = {
   id: "post3",
   title: "Bridging-Header란?",
   date: "2025/06/28",
+  tags: ["iOS", "Swift", "Objective-C", "React Native", "Bridging Header"],
   content: `
 <img src="${bridgingHeaderDiagram}" alt="Bridging Header Diagram" style="width: 100%; max-width: 600px; height: auto;" />
 

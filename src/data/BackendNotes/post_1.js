@@ -4,6 +4,7 @@ const post_1 = {
   id: "post1",
   title: "The Clean Architecture - 1",
   date: "2025/01/20",
+  tags: ["Backend", "Clean Architecture", "Software Design"],
   content: `
 
 <img src="${img1}" alt="Bridging Header Diagram" style="width: 100%; max-width: 600px; height: auto;" />

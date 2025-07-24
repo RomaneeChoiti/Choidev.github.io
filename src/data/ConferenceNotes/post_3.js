@@ -2,6 +2,7 @@ const post_3 = {
   id: "post3",
   title: "07/08 [컨퍼런스] 토스 SLASH23 - WedView와 React Native (2편)",
   date: "2023/07/08",
+  tags: ["Web Performance", "React Native", "Optimization", "JS Bundle"],
   content: `
 SLASH 컨퍼런스에서 발표된 내용을 정리해본 글입니다. 토스는 여러 개의 서비스를 독립적으로 운영하고 있고, 각 서비스가 따로 빌드되고 배포되는 구조를 가지고 있다. 이런 구조 속에서 React Native를 도입하면서 어떤 어려움이 있었고, 어떻게 해결했는지를 중심으로 다뤄졌다.
 
