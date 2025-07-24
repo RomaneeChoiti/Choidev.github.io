@@ -59,8 +59,11 @@ function PostPage({ type, postId }) {
 
     const contentWithIds = post.content.replace(
       /<h([1-6])([^>]*)>(.*?)<\/h\1>/g,
-      (match, level, attrs, text, index) =>
-        `<h${level} id="heading-${index}" data-heading>${text}</h${level}>`
+      (match, level, attrs, text, index) => {
+        const updatedHeading = `<h${level} id="heading-${index}" data-heading>${text}</h${level}>`;
+        console.log("Updated heading:", updatedHeading); // Debugging log
+        return updatedHeading;
+      }
     );
 
     return <PostDetail post={post} contentWithIds={contentWithIds} headings={headings} />;

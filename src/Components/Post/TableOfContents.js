@@ -7,20 +7,24 @@ function TableOfContents({ headings }) {
   useEffect(() => {
     const handleIntersection = (entries) => {
       entries.forEach((entry) => {
+        console.log("Observed element:", entry.target.id); // Log observed element
+        console.log("Is intersecting:", entry.isIntersecting); // Log intersection status
         if (entry.isIntersecting) {
           setActiveHeading(entry.target.id);
+          console.log("Active heading set to:", entry.target.id); // Log active heading
         }
       });
     };
 
     const observer = new IntersectionObserver(handleIntersection, {
       root: null,
-      rootMargin: "0px 0px -100% 0px", // Adjusted to focus on the top of the viewport
+      rootMargin: "0px 0px -50% 0px", // Adjusted to detect elements earlier
       threshold: 0, // Element must just enter the viewport
     });
 
     const headingElements = document.querySelectorAll("[data-heading]");
     headingElements.forEach((element) => {
+      console.log("Observing element:", element.id); // Log elements being observed
       observer.observe(element);
     });
 
