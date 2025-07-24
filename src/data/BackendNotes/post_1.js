@@ -1,7 +1,7 @@
 const post_1 = {
   id: "post1",
   title: "EC2 ↔ RDS(PostgreSQL) 연결 문제 해결 정리",
-  date: "2023/05/28",
+  date: "2025/05/28",
   content: `
 
 ## 에러 메시지
