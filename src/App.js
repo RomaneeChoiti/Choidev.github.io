@@ -6,7 +6,7 @@ import Blog from "./pages/BlogCard.js";
 import Navbar from "./components/Navbar.js";
 import ProjectDetail from "./pages/ProjectDetailPage.js";
 import DynamicPostPage from "./components/Post/DynamicPostPage.js";
-import ScrollToTop from "./components/ScrollToTop";
+import ScrollToTop from "./utils/ScrollToTop.js";
 
 function App() {
   return (
