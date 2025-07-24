@@ -2,6 +2,7 @@ const post_2 = {
   id: "post2",
   title: "개인서버 구축을 해야하겠다",
   date: "2025/06/28",
+  tags: ["Personal Server", "Mac Mini", "Raspberry Pi", "DIY"],
   content: `
 ### 개인서버가 필요한 이유는?
 개인프로젝트로 EC2, RDS, S3 등을 사용하며 현재는 프리티어여서 비용적 문제가 없다.

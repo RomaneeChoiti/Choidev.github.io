@@ -4,6 +4,7 @@ const post_1 = {
   id: "post1",
   title: "React Router와 GitHub Pages에서 발생하는 라우팅 문제 해결하기",
   date: "2024/10/22",
+  tags: ["React", "GitHub Pages", "Routing", "Web Development"],
   content: `
 <img src="${reactngit}" alt="Bridging Header Diagram" style="width: 100%; max-width: 600px; height: auto;" />
 <br />

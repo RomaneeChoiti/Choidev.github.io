@@ -2,6 +2,7 @@ const post_1 = {
   id: "post1",
   title: "아이폰 UDID",
   date: "2025/06/12",
+  tags: ["iOS", "UDID", "Apple Configurator", "Security"],
   content: `
 ### UDID란?
 아이폰의 UDID는 Unique Device Identifier의 약자로, 아이폰을 식별하는 고유한 문자열이다.

@@ -2,6 +2,7 @@ const post_2 = {
   id: "post2",
   title: "얼굴 인식 API를 활용한 인터랙티브 애니메이션 프로젝트",
   date: "2024/12/20",
+  tags: ["p5.js", "FaceAPI", "JavaScript", "Animation"],
   content: `
 이 프로젝트는 FaceAPI를 활용해 얼굴의 움직임을 추적하고, 이를 기반으로 애니메이션 효과를 생성하는 재미있는 시각적 경험을 제공합니다.  
 사용자의 얼굴 움직임에 따라 물방울 형태의 객체(WaterBlob)가 동적으로 반응하며, 반지름과 색상이 변화합니다.

@@ -2,6 +2,7 @@ const post_4 = {
   id: "post4",
   title: "선물하기 프론트엔드 성능 개선기 / if(kakaoAI)2024, 기술 컨퍼런스(1편)",
   date: "2024/10/11",
+  tags: ["Web Performance", "Optimization", "Frontend", "Kakao AI"],
   content: `
 # 웹 성능 최적화 기술 정리
 

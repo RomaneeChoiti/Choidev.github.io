@@ -2,6 +2,7 @@ const post_1 = {
   id: "post1",
   title: "06/24 [세미나] - DEVOCEAN, 29회차 Tech 세미나 “웹 프론트엔드 성능 최적화 방법 및 적용 사례”",
   date: "2023/06/24",
+   tags: ["Web Performance", "Core Web Vitals", "Optimization"],
   content: `
 #### 최적화가 왜 중요한가?
 
