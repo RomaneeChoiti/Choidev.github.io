@@ -9,6 +9,7 @@ import TableOfContents from "./TableOfContents";
 import ComedyNotes from "../../pages/ComedyNotes";
 import DevOpsNotes from "../../pages/DevOpsNotes";
 import calculateReadingTime from "../../utils/calculateReadingTime";
+import { isRecentPost } from "../../utils/isRecentPost";
 
 function PostPage({ type, postId }) {
   const navigate = useNavigate();
@@ -104,7 +105,10 @@ function PostPage({ type, postId }) {
             className={styles.postItem}
             onClick={() => handlePostClick(post.id)}
           >
-            <h2 className={styles.postTitle}>{post.title}</h2>
+            <div className={styles.postInfo}>
+              <h2 className={styles.postTitle}>{post.title}</h2>
+              {isRecentPost(post.date) && <p className={styles.recent}>new</p>}
+            </div>
             <div className={styles.postMeta}>
               <p>{post.date}</p>
               <p>{calculateReadingTime(post.content)} mins</p>
