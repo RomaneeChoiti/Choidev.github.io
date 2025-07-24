@@ -7,7 +7,8 @@ import frontendnotes from "../../pages/FrontendNotes";
 import hnsskillnotes from "../../pages/HnSskillNotes";
 import TableOfContents from "./TableOfContents";
 import ComedyNotes from "../../pages/ComedyNotes";
-import DevOpsNotes from "../../pages/DevOpsNotes"; // Import DevOpsNotes
+import DevOpsNotes from "../../pages/DevOpsNotes";
+import calculateReadingTime from "../../utils/calculateReadingTime";
 
 function PostPage({ type, postId }) {
   const navigate = useNavigate();
@@ -103,8 +104,11 @@ function PostPage({ type, postId }) {
             className={styles.postItem}
             onClick={() => handlePostClick(post.id)}
           >
-            <h2>{post.title}</h2>
-            <p className={styles.postDate}>{post.date}</p>
+            <h2 className={styles.postTitle}>{post.title}</h2>
+            <div className={styles.postMeta}>
+              <p>{post.date}</p>
+              <p>{calculateReadingTime(post.content)} mins</p>
+            </div>
             <Excerpt content={post.content} length={100} />
           </li>
         ))}

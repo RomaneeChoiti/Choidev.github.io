@@ -1,5 +1,3 @@
-import React from "react";
-
 export function Excerpt({ content, length }) {
   const getExcerpt = (content, length = 100) => {
     const parser = new DOMParser();
