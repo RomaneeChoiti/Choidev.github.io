@@ -1,0 +1,32 @@
+.postDetailDataMeta{
+    display: flex;
+    gap: 1rem;
+    color: #b3b3b3;
+    margin-bottom: 0.5rem;
+}
+.postDetailDataMeta p{
+    margin-bottom: 0%;
+}
+
+.title{
+    font-size: 2rem;
+    margin-bottom: 0%;
+}
+
+.tags {
+    margin-bottom: 1rem;
+    color: #bdbdbd;
+    font-size: 0.7rem; /* Reduced font size */
+}
+.tagItem{
+    font-size: 0.8rem;
+    border: 1px solid #676767;
+    border-radius: 4px;
+    padding: 0.2rem 0.5rem;
+}
+
+.tagList{
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}

@@ -1,15 +1,26 @@
 import { useNavigate } from "react-router-dom";
-import styles from "../../css/Post.module.css";
-import { Excerpt } from "./Excerpt";
+import PostStyles from "../../css/Post.module.css";
+import { Excerpt } from "../../utils/Excerpt";
 import conferencenotes from "../../pages/ConferenceNotes";
 import backendnotes from "../../pages/BackendNotes";
 import frontendnotes from "../../pages/FrontendNotes";
 import hnsskillnotes from "../../pages/HnSskillNotes";
-import TableOfContents from "./TableOfContents";
 import ComedyNotes from "../../pages/ComedyNotes";
 import DevOpsNotes from "../../pages/DevOpsNotes";
 import calculateReadingTime from "../../utils/calculateReadingTime";
 import { isRecentPost } from "../../utils/isRecentPost";
+import { extractHeadings } from "../../utils/extractHeading";
+import PostDetail from "./PostDetail";
+
+
+const typeToTitleMap = {
+  conferencenotes: "Conference Notes",
+  backendnotes: "Backend Notes",
+  frontendnotes: "Frontend Notes",
+  hnsskillnotes: "Hard and Soft Skill Notes",
+  devopsnotes: "DevOps Notes",
+  comedynotes: "Comedy Notes",
+};
 
 function PostPage({ type, postId }) {
   const navigate = useNavigate();
@@ -29,7 +40,6 @@ function PostPage({ type, postId }) {
       ? ComedyNotes
       : [];
 
-  // Ensure data is always an array
   const validData = Array.isArray(data) ? data : [];
 
   const sortedData = validData.sort((a, b) => new Date(b.date) - new Date(a.date));
@@ -44,18 +54,6 @@ function PostPage({ type, postId }) {
     navigate(`/${type}/${id}`, { replace: false });
   };
 
-  const extractHeadings = (content) => {
-    const headingRegex = /<h[1-6][^>]*>(.*?)<\/h[1-6]>/g;
-    const headings = [];
-    let match;
-
-    while ((match = headingRegex.exec(content)) !== null) {
-      headings.push({ id: `heading-${headings.length}`, text: match[1].trim() });
-    }
-
-    return headings;
-  };
-
   if (post) {
     const headings = extractHeadings(post.content);
 
@@ -65,60 +63,35 @@ function PostPage({ type, postId }) {
         `<h${level} id="heading-${index}" data-heading>${text}</h${level}>`
     );
 
-    return (
-      <div className={styles.container} style={{ display: "flex", gap: "1rem" }}>
-        <main className={styles.mainContent} style={{ flex: "1" }}>
-          <h1>{post.title}</h1>
-          <p className={styles.date}>{post.date}</p>
-          <div
-            className={styles.content}
-            dangerouslySetInnerHTML={{ __html: contentWithIds }}
-          />
-        </main>
-        <TableOfContents headings={headings} />
-      </div>
-    );
+    return <PostDetail post={post} contentWithIds={contentWithIds} headings={headings} />;
   }
 
   return (
-    <div className={styles.container}>
-      <h2 className={styles.pageTitle}>
-        {type === "conferencenotes"
-          ? "Conference Notes"
-          : type === "backendnotes"
-          ? "Backend Notes"
-          : type === "frontendnotes"
-          ? "Frontend Notes"
-          : type === "hnsskillnotes"
-          ? "Hard and Soft Skill Notes"
-          : type === "devopsnotes"
-          ? "DevOps Notes"
-          : type === "comedynotes"
-          ? "Comedy Notes"
-          : "Past Notes"
-        }
+    <div className={PostStyles.container}>
+      <h2 className={PostStyles.pageTitle}>
+        {typeToTitleMap[type] || "Past Notes"}
       </h2>
-      <ul className={styles.postList}>
+      <ul className={PostStyles.postList}>
         {validData.map((post) => (
           <li
             key={post.id}
-            className={styles.postItem}
+            className={PostStyles.postItem}
             onClick={() => handlePostClick(post.id)}
           >
-            <div className={styles.postInfo}>
-              <h2 className={styles.postTitle}>{post.title}</h2>
-              {isRecentPost(post.date) && <p className={styles.recent}>new</p>}
+            <div className={PostStyles.postInfo}>
+              <h2 className={PostStyles.postTitle}>{post.title}</h2>
+              {isRecentPost(post.date) && <p className={PostStyles.recent}>new</p>}
             </div>
-            <div className={styles.postMeta}>
+            <div className={PostStyles.postMeta}>
               <p>{post.date}</p>
               <p>{calculateReadingTime(post.content)} mins</p>
             </div>
             <Excerpt content={post.content} length={100} />
-            <div className={styles.tags}>
+            <div className={PostStyles.tags}>
               {post.tags && Array.isArray(post.tags) ? (
-                <ul className={styles.tagList}>
+                <ul className={PostStyles.tagList}>
                   {post.tags.map((tag, index) => (
-                    <l key={index} className={styles.tagItem}>
+                    <l key={index} className={PostStyles.tagItem}>
                         {tag}
                     </l>
                   ))}
