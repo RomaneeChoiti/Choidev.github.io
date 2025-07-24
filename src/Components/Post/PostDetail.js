@@ -1,7 +1,7 @@
 import styles from "../../css/Post.module.css";
 import postDetailStyles from "../../css/PostDetail.module.css";
 import calculateReadingTime from "../../utils/calculateReadingTime";
-import TableOfContents from "./TableOfContents";
+// import TableOfContents from "./TableOfContents";
 
 function PostDetail({ post, contentWithIds, headings }) {
   return (
@@ -28,9 +28,9 @@ function PostDetail({ post, contentWithIds, headings }) {
             dangerouslySetInnerHTML={{ __html: contentWithIds }}
         />
     </main>
-    <aside className={postDetailStyles.toc}>
+    {/* <aside className={postDetailStyles.toc}>
         <TableOfContents headings={headings} />
-    </aside>
+    </aside> */}
     </div>
   );
 }
