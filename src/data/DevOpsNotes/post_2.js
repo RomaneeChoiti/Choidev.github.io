@@ -1,7 +1,7 @@
 const post_2 = {
-    id: "post4",
+    id: "post2",
     title: "React Native iOS 환경 변수 (.env.prod) 적용 및 Xcode 빌드 설정",
-    date: "2025/07/14",
+    date: "2025/07/24",
     content: `
 ## 1. 개요
 React Native로 개발된 iOS 애플리케이션에서 환경 변수 설정을 위해 react-native-config 라이브러리를 사용한다. 이 라이브러리는 .env 파일에 정의된 키-값 쌍을 iOS, Android 네이티브와 JavaScript 코드에서 접근 가능하도록 해준다. iOS 빌드에서 특정 환경(.env.prod 등)의 환경 변수를 사용하기 위해 react-native-config를 설정하고, 빌드 중에 해당 값을 Xcode에서 읽어 앱에 반영하고자 한다.

@@ -67,6 +67,18 @@
   text-decoration: underline;
 }
 
+.postInfo{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+}
+.postInfo p {
+  margin: 0;
+  font-size: 0.8rem;
+  color: #ff6347;;
+}
+
 .postTitle {
   margin: 0%;
   font-size: 1.3rem;
