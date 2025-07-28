@@ -8,9 +8,9 @@ const TagsList = ({ tags }) => {
       {Array.isArray(tags) ? (
         <ul className={PostStyles.tagList}>
           {tags.map((tag, index) => (
-            <li key={index} className={PostStyles.tagItem}>
+            <div key={index} className={PostStyles.tagItem}>
               {tag}
-            </li>
+            </div>
           ))}
         </ul>
       ) : (
