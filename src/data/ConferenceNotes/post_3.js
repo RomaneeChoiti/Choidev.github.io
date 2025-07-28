@@ -1,6 +1,6 @@
 const post_3 = {
   id: "post3",
-  title: "07/08 [컨퍼런스] 토스 SLASH23 - WedView와 React Native (2편)",
+  title: "토스 SLASH23 - WedView와 React Native (2편)",
   date: "2023/07/08",
   tags: ["Web Performance", "React Native", "Optimization", "JS Bundle"],
   content: `

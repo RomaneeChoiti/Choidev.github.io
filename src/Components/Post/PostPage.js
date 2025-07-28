@@ -1,6 +1,5 @@
 import { useNavigate } from "react-router-dom";
 import PostStyles from "../../css/Post.module.css";
-import { Excerpt } from "../../utils/Excerpt";
 import conferencenotes from "../../pages/ConferenceNotes";
 import backendnotes from "../../pages/BackendNotes";
 import frontendnotes from "../../pages/FrontendNotes";
@@ -89,9 +88,8 @@ function PostPage({ type, postId }) {
             <div className={PostStyles.postMeta}>
               <p>{post.date}</p>
               <p>{calculateReadingTime(post.content)} mins</p>
+              <TagsList tags={post.tags} /> 
             </div>
-            <Excerpt content={post.content} length={100} />
-            <TagsList tags={post.tags} /> 
           </li>
         ))}
       </ul>
