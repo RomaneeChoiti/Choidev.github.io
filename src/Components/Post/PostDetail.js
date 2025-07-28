@@ -1,6 +1,7 @@
 import styles from "../../css/Post.module.css";
 import postDetailStyles from "../../css/PostDetail.module.css";
 import calculateReadingTime from "../../utils/calculateReadingTime";
+import TagsList from "./TagsList";
 // import TableOfContents from "./TableOfContents";
 
 function PostDetail({ post, contentWithIds, headings }) {
@@ -12,17 +13,7 @@ function PostDetail({ post, contentWithIds, headings }) {
             <p>{post.date}</p>
             <p>{calculateReadingTime(post.content)} mins</p>
         </div>
-        <div className={postDetailStyles.tags}>
-            {post.tags && Array.isArray(post.tags) ? (
-            <ul className={postDetailStyles.tagList}>
-                {post.tags.map((tag, index) => (
-                <l key={index} className={postDetailStyles.tagItem}>
-                    {tag}
-                </l>
-                ))}
-            </ul>
-            ) : (<p>{post.tags}</p>)}
-        </div>
+        <TagsList tags={post.tags} /> 
         <div
             className={styles.content}
             dangerouslySetInnerHTML={{ __html: contentWithIds }}

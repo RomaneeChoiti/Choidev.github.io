@@ -11,6 +11,7 @@ import calculateReadingTime from "../../utils/calculateReadingTime";
 import { isRecentPost } from "../../utils/isRecentPost";
 import { extractHeadings } from "../../utils/extractHeading";
 import PostDetail from "./PostDetail";
+import TagsList from "./TagsList";
 
 
 const typeToTitleMap = {
@@ -90,19 +91,7 @@ function PostPage({ type, postId }) {
               <p>{calculateReadingTime(post.content)} mins</p>
             </div>
             <Excerpt content={post.content} length={100} />
-            <div className={PostStyles.tags}>
-              {post.tags && Array.isArray(post.tags) ? (
-                <ul className={PostStyles.tagList}>
-                  {post.tags.map((tag, index) => (
-                    <l key={index} className={PostStyles.tagItem}>
-                        {tag}
-                    </l>
-                  ))}
-                </ul>
-              ) : (
-                <p>{post.tags}</p>
-              )}
-            </div>
+            <TagsList tags={post.tags} /> 
           </li>
         ))}
       </ul>
