@@ -1,9 +1,6 @@
 import pattern from "../../assets/images/artwork/pattern.png";
-import pattern1 from "../../assets/images/artwork/pattern1.png";
-import pattern2 from "../../assets/images/artwork/pattern2.png";
-import pattern3 from "../../assets/images/artwork/pattern3.png";
-import pattern4 from "../../assets/images/artwork/pattern4.png";
 import patternMP4 from "../../assets/video/pattern.mp4";
+import importImages from "../../utils/importImages";
 
 const ArtWork = {
   id: "ArtWork-Untitled-repeating-pattern",
@@ -21,7 +18,7 @@ const ArtWork = {
   },
   additionalInfo: "",
   image: pattern,
-  images: [pattern1, pattern2, pattern3, pattern4],
+  images: importImages("artwork", 4),
   video: patternMP4,
   VideoOverview: [
     "이 작품은 '제목 미정'이라는 이름을 가지며, 시작은 세 개의 점으로 이루어진 삼각형 모양으로 나타납니다.",

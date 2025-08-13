@@ -1,9 +1,5 @@
 import todoHunterLogo from "../../assets/images/todoHunter/logo.png";
-import character from "../../assets/images/todoHunter/character.png";
-import quest from "../../assets/images/todoHunter/quest.png";
-import ending from "../../assets/images/todoHunter/ending.png";
-
-const todoHunterImgs = [character, quest, ending];
+import importImages from "../../utils/importImages";
 
 const TodoHunter = {
   id: "Todo-Hunter",
@@ -20,7 +16,7 @@ const TodoHunter = {
     Deploy: ["PWA", "Linux(Ubuntu)", "GitHub Action", "PM2", "Nginx"],
   },
   image: todoHunterLogo,
-  images: [...todoHunterImgs],
+  images: importImages("todoHunter", 3),
   video: "https://youtu.be/3YnQLthmFRQ",
   VideoOverview: [
     "이 서비스는 사용자가 퀘스트를 완료하고 캐릭터를 성장시키는 과정을 통해 투두리스트 사용의 재미를 더합니다.",

@@ -1,10 +1,6 @@
 import binfindericon from "../../assets/images/binfinder/binfindericon.jpg";
-import about from "../../assets/images/binfinder/about.png";
-import community from "../../assets/images/binfinder/community.png";
-import fintrash from "../../assets/images/binfinder/fintrash.png";
-import how2 from "../../assets/images/binfinder/how2.png";
-import login from "../../assets/images/binfinder/login.png";
-import plogging from "../../assets/images/binfinder/plogging.jpg";
+import importImages from "../../utils/importImages";
+
 
 const BinFinderData = {
   id: "BinFinder",
@@ -31,7 +27,7 @@ const BinFinderData = {
   },
   additionalInfo: "",
   image: binfindericon,
-  images: [about, community, fintrash, how2, login, plogging],
+  images: importImages("binfinder", 6),
   video: "http://youtu.be/xK-ozv_efD8?si=3iv3ghvtDeSt-XpU",
   VideoOverview: [
     "이 영상은 팀 에베레스트의 기술 발표 영상입니다. 데이터 출처는 서울시 가로휴지통 설치정보 공공데이터이며, 이 웹 애플리케이션은 3명의 프론트엔드 개발자와 3명의 백엔드 개발자가 협력하여 개발했습니다.",
