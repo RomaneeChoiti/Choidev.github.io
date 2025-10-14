@@ -31,14 +31,17 @@ function VideoRenderer({ video }) {
   const videoClass = videoHeight > 900 ? styles.smallVideo : styles.largeVideo;
 
   if (isYouTubeLink(video)) {
+    // 16:9 비율을 위한 래퍼 div, CSS 클래스로 분리
     return (
-      <iframe
-        src={convertToSecureEmbedURL(video)}
-        title="YouTube Video"
-        className={videoClass}
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowFullScreen
-      ></iframe>
+      <div className={styles.youtubeWrapper}>
+        <iframe
+          src={convertToSecureEmbedURL(video)}
+          title="YouTube Video"
+          className={styles.youtubeIframe}
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        ></iframe>
+      </div>
     );
   } else if (video.startsWith("https")) {
     return (

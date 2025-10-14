@@ -1,5 +1,4 @@
 import image1 from "../../assets/images/artwork2/4.png";
-import rootMP4 from "../../assets/video/root.mp4";
 import importImages from "../../utils/importImages";
 
 const ArtWork = {
@@ -15,7 +14,7 @@ const ArtWork = {
   additionalInfo: "",
   image: image1,
   images: importImages("artwork2", 4),
-  video: rootMP4,
+  video: "https://youtu.be/cRdtgnQajvc",
   VideoOverview: [
     "클릭은 하나의 시작점이자, 생성의 신호이다. 한 번의 클릭으로 Root가 생성되고, 그로부터 Branch가 뻗어나와 Leaf가 형성된다. 이 구조는 단순한 나무의 성장처럼 보이지만, 실은 관계의 발생과 순환, 그리고 재생의 은유로 작동한다. Leaf와 Leaf가 맞닿는 순간, 새로운 Root가 태어나며 다시 Branch가 자라나고, 또 다른 Leaf가 생성된다. 이 무한한 반복은 생성과 소멸의 연속선 위에서 유기적인 세계를 구축해 나간다.",
     "작품의 전개는 점차 느려진다. 처음에는 빠르게 자라나는 가지와 잎의 움직임이 후반으로 갈수록 느린 리듬으로 변한다. 이는 마치 생명이 성장하며 스스로의 질서를 찾아가는 과정처럼, 혹은 시간의 깊이에 스며드는 의식의 변화처럼 보인다. 속도의 완화는 단순히 시각적 효과가 아니라, 관람자에게 ‘멈춤’과 ‘사유’의 순간을 제공한다. 생성의 흐름 속에서, 우리는 자신이 클릭으로 만들어낸 세계를 바라보며 스스로의 ‘근원(Root)’을 되묻게 된다.",
