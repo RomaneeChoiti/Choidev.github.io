@@ -3,8 +3,8 @@ import patternMP4 from "../../assets/video/pattern.mp4";
 import importImages from "../../utils/importImages";
 
 const ArtWork = {
-  id: "ArtWork-Untitled-repeating-pattern",
-  title: "ArtWork-Untitled-repeating-pattern",
+  id: "ArtWork-repeating-pattern-project-no-01",
+  title: "Provisional title : repeating pattern",
   year: "2023",
   platform: ["Web"],
   description: "이 작품은 웹 기반의 반복적인 패턴을 생성하는 예술 작품으로, 사용자와의 상호작용을 통해 다양한 패턴을 탐구합니다.",
@@ -26,7 +26,7 @@ const ArtWork = {
     "이 작품은 시간이 흐름에 따라 선명한 색상으로 표현되며, 계속해서 추가되는 점들로 인해 더욱 선명한 형태를 띠게 됩니다.",
     "그리고 150개의 점이 만나면, 이전에 형성된 형태는 사라지게 됩니다. 따라서 작품은 지속적으로 변화하면서 더 복잡하고 오묘한 형태를 만들어내는데, 이는 각 추가되는 요소가 이전의 것과 조화를 이루면서 새로운 시각적 경험을 제공하는 것으로 해석될 수 있습니다."
   ],
-  link: "/works/ArtWork-Untitled-repeating-pattern",
+  link: "/works/ArtWork-repeating-pattern-project-no-01",
   gitLink: "https://github.com/RomaneeChoiti/ArtWork-Untitled-repeating-pattern",
   blogLink: "",
   team: [{ name: "최승원", role: "Frontend Developer" }]

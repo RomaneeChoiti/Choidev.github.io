@@ -73,7 +73,7 @@ function ProjectDetail() {
 
       {project.video && (
         <div className={styles.videoContainer}>
-          <VideoRenderer video={project.video} />
+          <VideoRenderer video={project.video} className={styles.largeVideo} />
         </div>
       )}
 
@@ -124,11 +124,14 @@ function ProjectDetail() {
           ))}
         </ul>
       </div>
-
-      <p>{project.additionalInfo}</p>
-      <a href={project.gitLink} target="_blank" rel="noopener noreferrer">
-        [ View source code on GitHub ]
-      </a>
+    {project.gitLink && (
+      <>
+        <p>{project.additionalInfo}</p>
+        <a href={project.gitLink} target="_blank" rel="noopener noreferrer">
+          [ View source code on GitHub ]
+        </a>
+      </>
+    )}
       {project.blogLink && (
         <>
           &nbsp;

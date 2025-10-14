@@ -8,5 +8,6 @@
     "noreferrer",
     "predeploy",
     "youtu"
-  ]
+  ],
+  "liveServer.settings.port": 5502
 }
