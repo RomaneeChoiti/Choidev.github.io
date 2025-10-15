@@ -4,15 +4,11 @@ import importImages from "../../utils/importImages";
 
 const ArtWork = {
   id: "ArtWork-repeating-pattern-project-no-01",
-  title: "Provisional title : repeating pattern",
+  title: "가제 : repeating pattern - Project No.01",
   year: "2023",
   platform: ["Web"],
-  description: "이 작품은 웹 기반의 반복적인 패턴을 생성하는 예술 작품으로, 사용자와의 상호작용을 통해 다양한 패턴을 탐구합니다.",
-  features: [
-    "반복적인 패턴 생성",
-    "사용자 상호작용을 통한 패턴 변경",
-    "동적인 시각적 표현"
-  ],
+  description: "웹 기반의 반복적인 패턴을 생성하는 예술 작품으로, 사용자와의 상호작용을 통해 다양한 패턴을 탐구합니다.",
+  features: [],
   techStack: {
     frontend: ["p5.js", "HTML", "CSS", "JavaScript"]
   },
