@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Choidev.github.io/static/css/main.5208286a.css",
-    "main.js": "/Choidev.github.io/static/js/main.c5963699.js",
+    "main.css": "/Choidev.github.io/static/css/main.5550545e.css",
+    "main.js": "/Choidev.github.io/static/js/main.68fc4fad.js",
     "static/media/pattern.mp4": "/Choidev.github.io/static/media/pattern.f8056eac5ce44e6cbb6b.mp4",
     "static/media/1.png": "/Choidev.github.io/static/media/1.d4d1c90e959a09ae2ffe.png",
     "static/media/2.png": "/Choidev.github.io/static/media/2.a06ebf42bb09d8b27366.png",
@@ -32,11 +32,11 @@
     "static/media/slick.ttf": "/Choidev.github.io/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/Choidev.github.io/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/Choidev.github.io/index.html",
-    "main.5208286a.css.map": "/Choidev.github.io/static/css/main.5208286a.css.map",
-    "main.c5963699.js.map": "/Choidev.github.io/static/js/main.c5963699.js.map"
+    "main.5550545e.css.map": "/Choidev.github.io/static/css/main.5550545e.css.map",
+    "main.68fc4fad.js.map": "/Choidev.github.io/static/js/main.68fc4fad.js.map"
   },
   "entrypoints": [
-    "static/css/main.5208286a.css",
-    "static/js/main.c5963699.js"
+    "static/css/main.5550545e.css",
+    "static/js/main.68fc4fad.js"
   ]
 }
