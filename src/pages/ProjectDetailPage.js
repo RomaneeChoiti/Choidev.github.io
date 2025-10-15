@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import styles from "../css/ProjectDetail.module.css";
 import projects from "../data/projects";
@@ -9,6 +10,29 @@ import "slick-carousel/slick/slick-theme.css";
 function ProjectDetail() {
   const { projectId } = useParams();
   const project = projects.find((p) => p.id === projectId);
+
+  // modal state must be declared before any early returns (React Hooks rule)
+  const [modalOpen, setModalOpen] = useState(false);
+  const [modalIndex, setModalIndex] = useState(null);
+  const [modalIsPortrait, setModalIsPortrait] = useState(false);
+  
+
+  // keyboard navigation & Esc (hook declared unconditionally)
+  useEffect(() => {
+    if (!modalOpen || !project) return;
+    function onKey(e) {
+      if (e.key === "Escape") {
+        setModalOpen(false);
+        setModalIndex(null);
+      } else if (e.key === "ArrowRight") {
+        setModalIndex((i) => (i == null ? i : (i + 1) % project.images.length));
+      } else if (e.key === "ArrowLeft") {
+        setModalIndex((i) => (i == null ? i : (i - 1 + project.images.length) % project.images.length));
+      }
+    }
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [modalOpen, project]);
 
   if (!project) {
     return <p>Project not found.</p>;
@@ -35,6 +59,42 @@ function ProjectDetail() {
   const renderList = (items, renderFn) =>
     items.map((item, index) => renderFn(item, index));
 
+  const handleImageClick = (index) => {
+    // detect image orientation before opening modal
+    const img = new Image();
+    img.src = project.images[index];
+    img.onload = () => {
+      const isPortrait = img.naturalHeight > img.naturalWidth;
+      setModalIsPortrait(isPortrait);
+      setModalIndex(index);
+      setModalOpen(true);
+    };
+    // fallback in case onload doesn't fire fast enough
+    img.onerror = () => {
+      setModalIsPortrait(false);
+      setModalIndex(index);
+      setModalOpen(true);
+    };
+  };
+
+  const closeModal = () => {
+    setModalOpen(false);
+    setModalIndex(null);
+  };
+
+  // navigation buttons
+  const showNext = () => {
+    if (modalIndex == null) return;
+    setModalIndex((i) => (i + 1) % project.images.length);
+  };
+
+  const showPrev = () => {
+    if (modalIndex == null) return;
+    setModalIndex((i) => (i - 1 + project.images.length) % project.images.length);
+  };
+
+  
+
   return (
     <div className={styles.container}>
       <div className={styles.flexContainer}>
@@ -48,7 +108,7 @@ function ProjectDetail() {
       </div>
 
       <Slider {...sliderSettings} className={styles.imageGallery}>
-        {project.images.map((img, index) => {
+  {project.images.map((img, index) => {
           const handleImageLoad = (event) => {
             const imgElement = event.target;
             if (imgElement.naturalWidth > imgElement.naturalHeight) {
@@ -65,11 +125,47 @@ function ProjectDetail() {
                 alt={`${project.title} screenshot ${index + 1}`}
                 className={styles.galleryImage}
                 onLoad={handleImageLoad}
+                onClick={() => handleImageClick(index)}
               />
             </div>
           );
         })}
       </Slider>
+
+      {/* Image modal (lightbox) */}
+      {modalOpen && modalIndex != null && (
+        <div className={styles.modalOverlay} onClick={closeModal}>
+          <div className={styles.modalContent} onClick={(e) => e.stopPropagation()}>
+            <button
+              className={`${styles.modalArrow} ${styles.left}`}
+              onClick={(e) => {
+                e.stopPropagation();
+                showPrev();
+              }}
+              aria-label="Previous"
+            >
+              ‹
+            </button>
+
+            <img
+              src={project.images[modalIndex]}
+              alt={`Enlarged ${modalIndex + 1}`}
+              className={`${styles.modalImage} ${modalIsPortrait ? styles.portraitImage : ""}`}
+            />
+
+            <button
+              className={`${styles.modalArrow} ${styles.right}`}
+              onClick={(e) => {
+                e.stopPropagation();
+                showNext();
+              }}
+              aria-label="Next"
+            >
+              ›
+            </button>
+          </div>
+        </div>
+      )}
 
       {project.video && (
         <div className={styles.videoContainer}>
