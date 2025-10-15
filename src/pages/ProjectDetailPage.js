@@ -135,6 +135,16 @@ function ProjectDetail() {
       {/* Image modal (lightbox) */}
       {modalOpen && modalIndex != null && (
         <div className={styles.modalOverlay} onClick={closeModal}>
+          <button
+            className={styles.modalClose}
+            onClick={(e) => {
+              e.stopPropagation();
+              closeModal();
+            }}
+            aria-label="Close"
+          >
+            ×
+          </button>
           <div className={styles.modalContent} onClick={(e) => e.stopPropagation()}>
             <button
               className={`${styles.modalArrow} ${styles.left}`}

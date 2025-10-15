@@ -213,3 +213,28 @@ body.dark-mode li {
   outline: none;
   box-shadow: 0 6px 18px rgba(0,0,0,0.35);
 }
+.modalClose {
+  position: fixed;
+  top: 12px;
+  right: 12px;
+  width: 44px;
+  height: 44px;
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10001; /* above arrows */
+  cursor: pointer;
+  transition: background 150ms ease, transform 150ms ease, opacity 150ms ease;
+  opacity: 0.85;
+}
+.modalClose:hover,
+.modalClose:focus-visible {
+  background: rgba(0,0,0,0.85);
+  transform: scale(1.04);
+  opacity: 1;
+}
