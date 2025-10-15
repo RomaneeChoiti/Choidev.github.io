@@ -2,9 +2,6 @@ import logo from "../../assets/images/greenwayseoul/logo.png";
 import importImages from "../../utils/importImages";
 
 const GreenWaySeoulData = {
-  keywords: ["GreenWaySeoul", "plogging", "React Native", "map", "AWS", "NestJS"],
-  startDate: "2025-04-01",
-  endDate: null,
   id: "GreenWaySeoul",
   title: "GreenWaySeoul",
   year: "2025 ~",

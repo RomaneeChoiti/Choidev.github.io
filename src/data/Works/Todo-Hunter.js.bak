@@ -2,9 +2,6 @@ import todoHunterLogo from "../../assets/images/todoHunter/logo.png";
 import importImages from "../../utils/importImages";
 
 const TodoHunter = {
-  keywords: ["Todo-Hunter", "gamification", "TypeScript", "React", "Next.js", "Prisma", "PWA"],
-  startDate: "2025-02-14",
-  endDate: "2025-06-01(잠정 중단)",
   id: "Todo-Hunter",
   title: "TODO-HUNTER : ~ RETURN OF SCROLL ~",
   year: "2025",

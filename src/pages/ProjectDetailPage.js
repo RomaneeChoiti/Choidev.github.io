@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import styles from "../css/ProjectDetail.module.css";
 import projects from "../data/projects";
 import VideoRenderer from "../components/VideoRenderer";
+import SEO from "../components/SEO";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -34,9 +35,21 @@ function ProjectDetail() {
     return () => window.removeEventListener("keydown", onKey);
   }, [modalOpen, project]);
 
+  // SEO is handled by the reusable <SEO /> component below
+
   if (!project) {
     return <p>Project not found.</p>;
   }
+
+  const keywordsForSEO = (() => {
+    const kwSet = new Set();
+    if (Array.isArray(project.keywords)) project.keywords.forEach(k => k && kwSet.add(k));
+    if (project.techStack) Object.values(project.techStack).forEach(arr => arr.forEach(t => t && kwSet.add(t)));
+    if (Array.isArray(project.platform)) project.platform.forEach(p => p && kwSet.add(p));
+    if (project.title) project.title.split(/[\s:–—,_]+/).slice(0,6).forEach(w => w && kwSet.add(w));
+    if (Array.isArray(project.team)) project.team.forEach(m => m.name && kwSet.add(m.name));
+    return Array.from(kwSet).slice(0,30);
+  })();
 
   const sliderSettings = {
     dots: false, // Remove the dots indicator
@@ -96,7 +109,18 @@ function ProjectDetail() {
   
 
   return (
-    <div className={styles.container}>
+    <>
+      <SEO
+        title={`${project.title} — Choi Dev`}
+        description={project.description}
+        image={project.images && project.images[0]}
+        keywords={keywordsForSEO.join(', ')}
+        authors={(project.team || []).map(m => m.name)}
+        techs={project.techStack ? Object.values(project.techStack).flat() : []}
+        datePublished={project.year ? String(project.year) : undefined}
+        url={window.location.href}
+      />
+      <div className={styles.container}>
       <div className={styles.flexContainer}>
         <img src={project.image} alt={project.title} className={styles.image} />
         <div className={styles.info}>
@@ -271,6 +295,7 @@ function ProjectDetail() {
         </>
       )}
     </div>
+    </>
   );
 }
 

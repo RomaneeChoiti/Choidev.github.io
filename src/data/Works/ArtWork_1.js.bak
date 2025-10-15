@@ -3,9 +3,6 @@ import patternMP4 from "../../assets/video/pattern.mp4";
 import importImages from "../../utils/importImages";
 
 const ArtWork = {
-  keywords: ["repeating pattern", "generative art", "p5.js", "interactive", "art"],
-  startDate: "2023-03-01",
-  endDate: null,
   id: "ArtWork-repeating-pattern-project-no-01",
   title: "가제 : repeating pattern - Project No.01",
   year: "2023",

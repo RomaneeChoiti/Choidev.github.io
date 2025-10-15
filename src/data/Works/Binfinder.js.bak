@@ -3,9 +3,6 @@ import importImages from "../../utils/importImages";
 
 
 const BinFinderData = {
-  keywords: ["BinFinder", "trash", "map", "React", "Spring Boot", "MySQL", "AWS", "plogging"],
-  startDate: "2023-04-28",
-  endDate: "2023-05-31",
   id: "BinFinder",
   title: "BinFinder",
   year: "2023",

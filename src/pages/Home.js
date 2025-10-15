@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styles from "../css/Home.module.css";
+import SEO from "../components/SEO";
 import { Link } from "react-router-dom";
 
 function Home() {
@@ -10,7 +11,17 @@ function Home() {
   };
 
   return (
-    <div className={styles.container}>
+    <>
+      <SEO
+        title="Choi Dev — 홈"
+        description="Choi Dev의 포트폴리오와 기술 블로그 — 프론트엔드, 백엔드, DevOps 관련 아카이빙"
+        image={require('../assets/images/choi.png')}
+        keywords={'Choi Dev,portfolio,blog,frontend,art'}
+        authors={['최승원']}
+        techs={['React','p5.js']}
+        url={window.location.href}
+      />
+      <div className={styles.container}>
       <div className={styles.header}>
         <h1 className={styles.title}>
           Choi Dev의 디지털 작업실에 오신 것을 환영합니다.
@@ -52,7 +63,8 @@ function Home() {
           Blog
         </Link>
       </p>
-    </div>
+      </div>
+    </>
   );
 }
 
