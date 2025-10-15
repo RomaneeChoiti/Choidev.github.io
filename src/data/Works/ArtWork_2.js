@@ -24,6 +24,7 @@ const ArtWork = {
     "ROOT is both a visual experiment and a meditation on the circulation of being. Every entity grows through connection, and each connection becomes the seed of another emergence. By translating this process into an interactive experience, the work invites participants to engage directly with the act of becoming — to witness growth, decay, and rebirth as intertwined states. Ultimately, ROOT is not a single organism, but a living network — a constellation of countless connections that together breathe as one."
   ],
   link: "/works/ArtWork-root-project-no-02",
+  ArtWorkLink: "https://root-kohl.vercel.app/",
   team: [{ name: "최승원", role: "Frontend Developer" }]
 };
 

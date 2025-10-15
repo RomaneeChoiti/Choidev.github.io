@@ -148,6 +148,14 @@ function ProjectDetail() {
           </a>
         </>
       )}
+      {project.ArtWorkLink && (
+        <>
+          &nbsp;
+          <a href={project.ArtWorkLink} target="_blank" rel="noopener noreferrer">
+             View ArtWork : {project.ArtWorkLink}
+          </a>
+        </>
+      )}
       {project.downLoadLink && (
         <>
           &nbsp;
