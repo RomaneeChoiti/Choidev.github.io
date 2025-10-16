@@ -16,6 +16,7 @@ function ProjectDetail() {
   const [modalOpen, setModalOpen] = useState(false);
   const [modalIndex, setModalIndex] = useState(null);
   const [modalIsPortrait, setModalIsPortrait] = useState(false);
+  const isSliding = React.useRef(false);
   
 
   // keyboard navigation & Esc (hook declared unconditionally)
@@ -58,7 +59,9 @@ function ProjectDetail() {
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false, // Hide the navigation arrows
-    responsive: [
+  beforeChange: () => { isSliding.current = true; },
+  afterChange: () => { isSliding.current = false; },
+  responsive: [
       {
         breakpoint: 768,
         settings: {
@@ -73,7 +76,9 @@ function ProjectDetail() {
     items.map((item, index) => renderFn(item, index));
 
   const handleImageClick = (index) => {
-    // detect image orientation before opening modal
+  // if user is currently sliding, ignore click to avoid conflict
+  if (isSliding.current) return;
+  // detect image orientation before opening modal
     const img = new Image();
     img.src = project.images[index];
     img.onload = () => {
