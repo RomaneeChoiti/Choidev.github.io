@@ -1,8 +1,9 @@
 import image1 from "../../assets/images/artwork4/1.png";
 import importImages from "../../utils/importImages";
+import ARTWORK_KEYWORDS from "../keywords";
 
 const ArtWork = {
-  keywords: ["Untitled", "generative art", "p5.js", "interactive"],
+  keywords: ARTWORK_KEYWORDS['ArtWork-Untitled-project-no-04'],
   startDate: "2025-10-01",
   endDate: null,
   id: "ArtWork-Untitled-project-no-04",

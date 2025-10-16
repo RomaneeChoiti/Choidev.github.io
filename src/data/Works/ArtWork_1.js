@@ -1,9 +1,10 @@
 import pattern from "../../assets/images/artwork/pattern.png";
 import patternMP4 from "../../assets/video/pattern.mp4";
 import importImages from "../../utils/importImages";
+import ARTWORK_KEYWORDS from "../keywords";
 
 const ArtWork = {
-  keywords: ["repeating pattern", "generative art", "p5.js", "interactive", "art"],
+  keywords: ARTWORK_KEYWORDS['ArtWork-repeating-pattern-project-no-01'],
   startDate: "2023-03-01",
   endDate: null,
   id: "ArtWork-repeating-pattern-project-no-01",
