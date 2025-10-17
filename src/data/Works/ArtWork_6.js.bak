@@ -1,9 +1,10 @@
-import image1 from "../../assets/images/artwork5/1.png";
+import image1 from "../../assets/images/artwork6/2.png";
 import importImages from "../../utils/importImages";
+import ARTWORK_KEYWORDS from "../keywords";
 
 const ArtWork = {
-  id: "ArtWork-Untitled-project-no-05",
-  title: "Untitled - Project No.05",
+  id: "ArtWork-Untitled-project-no-06",
+  title: "Untitled - Project No.06",
   year: "2025",
   platform: ["Web"],
   description: "",
@@ -13,12 +14,12 @@ const ArtWork = {
   },
   additionalInfo: "",
   image: image1,
-  images: importImages("artwork5", 4),
-  video: "https://youtu.be/ejfUoZFww0g",
+  images: importImages("artwork6", 4),
+  video: "https://youtu.be/azEWGMsb-o0",
   VideoOverview: [
 ],
-  link: "/works/ArtWork-Untitled-project-no-05",
-  ArtWorkLink: "https://untitled-project-no-05.vercel.app/",
+  link: "/works/ArtWork-Untitled-project-no-06",
+  ArtWorkLink: "https://untitled-project-no-06.vercel.app/",
   team: [{ name: "최승원", role: "Frontend Developer" }]
 };
 
