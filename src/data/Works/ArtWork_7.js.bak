@@ -1,0 +1,26 @@
+import image1 from "../../assets/images/artwork6/2.png";
+import importImages from "../../utils/importImages";
+import ARTWORK_KEYWORDS from "../keywords";
+
+const ArtWork = {
+  id: "ArtWork-Untitled-project-no-06",
+  title: "Untitled - Project No.06",
+  year: "2025",
+  platform: ["Web"],
+  description: "",
+  features: [],
+  techStack: {
+    frontend: ["p5.js", "HTML", "CSS", "JavaScript"]
+  },
+  additionalInfo: "",
+  image: image1,
+  images: importImages("artwork6", 4),
+  video: "https://youtu.be/azEWGMsb-o0",
+  VideoOverview: [
+],
+  link: "/works/ArtWork-Untitled-project-no-06",
+  ArtWorkLink: "https://untitled-project-no-06.vercel.app/",
+  team: [{ name: "최승원", role: "Frontend Developer" }]
+};
+
+export default ArtWork;
