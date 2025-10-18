@@ -8,9 +8,6 @@ const ArtWork = {
   platform: ["Web"],
   description: "ROOT는 클릭을 통해 생성과 순환, 연결의 과정을 시각화하며, 생명의 흐름과 존재의 근원을 탐구하는 인터랙티브 작업이다.",
   features: [],
-  techStack: {
-    frontend: ["p5.js", "HTML", "CSS", "JavaScript"]
-  },
   additionalInfo: "",
   image: image1,
   images: importImages("artwork2", 4),
@@ -25,7 +22,6 @@ const ArtWork = {
   ],
   link: "/works/ArtWork-root-project-no-02",
   ArtWorkLink: "https://root-kohl.vercel.app/",
-  team: [{ name: "최승원", role: "Frontend Developer" }]
 };
 
 export default ArtWork;

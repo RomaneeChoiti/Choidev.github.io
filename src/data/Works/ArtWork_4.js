@@ -10,20 +10,16 @@ const ArtWork = {
   title: "Untitled - Project No.04",
   year: "2025",
   platform: ["Web"],
-  description: "",
+  description: "설명 한줄",
   features: [],
-  techStack: {
-    frontend: ["p5.js", "HTML", "CSS", "JavaScript"]
-  },
   additionalInfo: "",
   image: image1,
   images: importImages("artwork4", 8),
   video: "https://youtu.be/bdgi2E1K6Vc",
-  VideoOverview: [
+  VideoOverview: ["설명 여러줄"
 ],
   link: "/works/ArtWork-Untitled-project-no-04",
   ArtWorkLink: "https://untitled-project-no-04.vercel.app/",
-  team: [{ name: "최승원", role: "Frontend Developer" }]
 };
 
 export default ArtWork;

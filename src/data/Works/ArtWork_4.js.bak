@@ -8,9 +8,6 @@ const ArtWork = {
   platform: ["Web"],
   description: "",
   features: [],
-  techStack: {
-    frontend: ["p5.js", "HTML", "CSS", "JavaScript"]
-  },
   additionalInfo: "",
   image: image1,
   images: importImages("artwork4", 8),
@@ -19,7 +16,6 @@ const ArtWork = {
 ],
   link: "/works/ArtWork-Untitled-project-no-04",
   ArtWorkLink: "https://untitled-project-no-04.vercel.app/",
-  team: [{ name: "최승원", role: "Frontend Developer" }]
 };
 
 export default ArtWork;

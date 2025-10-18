@@ -234,31 +234,37 @@ function ProjectDetail() {
           </ul>
         </>
       )}
-
-      <h3 className={styles.sectionHeader}>Tech Stack:</h3>
-      <div className={styles.categoryGrid}>
-        {Object.entries(project.techStack).map(([category, technologies]) => (
-          <div key={category} className={styles.categoryCard}>
-            <h4 className={styles.subHeader}>{getCategoryName(category)}:</h4>
+  {project.techStack &&(
+    <>
+        <h3 className={styles.sectionHeader}>Tech Stack:</h3>
+        <div className={styles.categoryGrid}>
+          {Object.entries(project.techStack).map(([category, technologies]) => (
+            <div key={category} className={styles.categoryCard}>
+              <h4 className={styles.subHeader}>{getCategoryName(category)}:</h4>
+              <ul>
+                {renderList(technologies, (tech, index) => (
+                  <li key={index}>{tech}</li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+    </>
+  )}
+    {project.team && (
+      <>
+          <div className={styles.teamSection}>
+            <h3 className={styles.sectionHeader}>Team Members:</h3>
             <ul>
-              {renderList(technologies, (tech, index) => (
-                <li key={index}>{tech}</li>
+              {renderList(project.team, (member, index) => (
+                <li key={index}>
+                  {member.name} - {member.role}
+                </li>
               ))}
             </ul>
           </div>
-        ))}
-      </div>
-
-      <div className={styles.teamSection}>
-        <h3 className={styles.sectionHeader}>Team Members:</h3>
-        <ul>
-          {renderList(project.team, (member, index) => (
-            <li key={index}>
-              {member.name} - {member.role}
-            </li>
-          ))}
-        </ul>
-      </div>
+      </>
+    )}
     {project.gitLink && (
       <>
         <p>{project.additionalInfo}</p>
