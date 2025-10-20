@@ -5,6 +5,8 @@ import Works from "./pages/Works.js";
 import Blog from "./pages/BlogCard.js";
 import Navbar from "./components/Navbar.js";
 import ProjectDetail from "./pages/ProjectDetailPage.js";
+import Bio from "./pages/Bio";
+import Contact from "./pages/Contact";
 import DynamicPostPage from "./components/Post/DynamicPostPage.js";
 import ScrollToTop from "./utils/ScrollToTop.js";
 
@@ -20,6 +22,8 @@ function App() {
             <Route path="/works" element={<Works />} />
             <Route path="/works/:projectId" element={<ProjectDetail />} />
             <Route path="/blog" element={<Blog />} />
+            <Route path="/bio" element={<Bio />} />
+            <Route path="/contact" element={<Contact />} />
             <Route path="/:type" element={<DynamicPostPage />} />
             <Route path="/:type/:postId" element={<DynamicPostPage />} />
           </Routes>
