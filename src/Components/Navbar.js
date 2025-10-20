@@ -14,6 +14,9 @@ function Navbar() {
           <NavLink to="/works" className={({ isActive }) => (isActive ? 'active' : '')}>work</NavLink>
         </li>
         <li>
+          <NavLink to="/artist-statement" className={({ isActive }) => (isActive ? 'active' : '')}>artist statement</NavLink>
+        </li>
+        <li>
           <NavLink to="/bio" className={({ isActive }) => (isActive ? 'active' : '')}>bio</NavLink>
         </li>
         <li>
