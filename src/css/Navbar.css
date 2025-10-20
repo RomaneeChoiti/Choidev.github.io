@@ -64,17 +64,25 @@ nav ul li button {
 
   nav ul li a,
   nav ul li button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 64px;
-    text-decoration: none;
-    color: var(--nav-text);
-    font-weight: 600;
-    border-radius: 2px;
-    transition: transform 120ms ease, box-shadow 120ms ease, background-color 160ms ease;
-    background: var(--nav-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 64px;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: var(--nav-text);
+  font-weight: 600;
+  border-radius: 2px;
+  transition: transform 120ms ease, box-shadow 120ms ease, background-color 160ms ease;
+  background: var(--nav-bg);
+  /* Responsive text: shrink on smaller viewports but remain readable */
+  font-size: clamp(12px, 1.6vw, 18px);
+  text-align: center;
+  white-space: nowrap; /* keep single line and let font-size shrink */
+  overflow: hidden;
+  text-overflow: ellipsis; /* in extreme cases */
+  padding: 0 8px;
   }
 
   /* Active link style */

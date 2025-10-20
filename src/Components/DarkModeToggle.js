@@ -31,7 +31,6 @@ function DarkModeToggle() {
       onClick={toggleDarkMode}
       aria-pressed={isDarkMode}
       aria-label={isDarkMode ? 'Disable dark mode' : 'Enable dark mode'}
-      style={{ cursor: 'pointer', fontSize: '1rem', background: 'transparent', border: 'none' }}
     >
       {isDarkMode ? "dark" : "light"}
     </button>
