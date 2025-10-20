@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import styles from "../css/Card.module.css";
 
 function Card({ item, onClick }) {
@@ -22,7 +22,6 @@ function Card({ item, onClick }) {
       />
       <div className={styles.info}>
         <h2>{item.title}</h2>
-        <p>{item.description}</p>
         {item.year && <p>{item.year}</p>}
       </div>
     </div>

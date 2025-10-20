@@ -1,6 +1,6 @@
 .card {
   background-color: #fff;
-  border-radius: 8px;
+  border-radius: 2px;
   overflow: hidden;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   cursor: pointer;
@@ -29,6 +29,14 @@
   font-size: 1.2rem;
   color: #333;
   margin: 0;
+}
+
+/* Truncate long titles with ellipsis */
+.info h2 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
 }
 
 .info p {
