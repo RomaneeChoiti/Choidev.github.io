@@ -7,10 +7,10 @@ function Home() {
   return (
     <>
       <SEO
-        title="Choi Dev — 홈"
-        description="Choi Dev의 포트폴리오와 기술 블로그 — 프론트엔드, 백엔드, DevOps 관련 아카이빙"
+        title="STUDIO CHOI"
+        description="최승원의 스튜디오 및 예술 아카이빙"
         image={require('../assets/images/choi.png')}
-        keywords={'Choi Dev,portfolio,blog,frontend,art'}
+        keywords={'STUDIO CHOI,portfolio,blog,frontend,art'}
         authors={['최승원']}
         techs={['React','p5.js']}
         url={window.location.href}

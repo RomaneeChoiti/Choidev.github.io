@@ -6,10 +6,10 @@ function Contact() {
   return (
     <>
       <SEO
-        title="Choi Dev — Contact"
+        title="STUDIO CHOI — Contact"
         description="Contact STUDIO CHOI — 문의 및 협업 요청"
         image={require('../assets/images/choi.png')}
-        keywords={['Choi Dev','contact','email']}
+        keywords={['STUDIO CHOI','contact','email']}
         authors={['최승원']}
         techs={['React']}
         url={typeof window !== 'undefined' ? window.location.href : ''}

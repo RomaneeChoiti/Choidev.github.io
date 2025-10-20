@@ -116,7 +116,7 @@ function ProjectDetail() {
   return (
     <>
       <SEO
-        title={`${project.title} — Choi Dev`}
+        title={`${project.title} — STUDIO CHOI`}
         description={project.description}
         image={project.images && project.images[0]}
         keywords={keywordsForSEO.join(', ')}

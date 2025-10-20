@@ -8,7 +8,7 @@ function Bio() {
         title="Choi Seungwon — Bio"
         description="STUDIO CHOI의 작가 소개 페이지 — 최승원(Choi Seungwon)의 약력과 연락처"
         image={require('../assets/images/choi.png')}
-        keywords={['Choi Dev','bio','artist','media-art']}
+        keywords={['STUDIO CHOI','bio','artist','media-art']}
         authors={['최승원']}
         techs={['p5.js','React']}
         url={typeof window !== 'undefined' ? window.location.href : ''}
