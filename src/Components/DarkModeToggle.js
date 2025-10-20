@@ -1,37 +1,40 @@
-import React, { useState, useEffect } from "react";
-import { CiLight } from "react-icons/ci";
-import { MdNightlightRound } from "react-icons/md";
+import { useState, useEffect } from "react";
 
 function DarkModeToggle() {
   const [isDarkMode, setIsDarkMode] = useState(() => {
-    // Load initial state from localStorage
-    const savedMode = localStorage.getItem("darkMode");
-    return savedMode === "true";
+    try {
+      const savedMode = localStorage.getItem("darkMode");
+      return savedMode === "true";
+    } catch (e) {
+      return false;
+    }
   });
 
   useEffect(() => {
-    // Apply the dark mode class to the body
-    document.body.classList.toggle("dark-mode", isDarkMode);
-    // Save the current mode to localStorage
-    localStorage.setItem("darkMode", isDarkMode);
+    try {
+      // Apply the dark mode class to the body
+      document.body.classList.toggle("dark-mode", isDarkMode);
+      // Save the current mode to localStorage
+      localStorage.setItem("darkMode", isDarkMode);
+    } catch (e) {
+      // ignore
+    }
   }, [isDarkMode]);
-
-  // Immediately apply the dark mode class on initial load
-  if (localStorage.getItem("darkMode") === "true") {
-    document.body.classList.add("dark-mode");
-  }
 
   const toggleDarkMode = () => {
     setIsDarkMode((prevMode) => !prevMode);
   };
 
   return (
-    <span
+    <button
+      type="button"
       onClick={toggleDarkMode}
-      style={{ cursor: "pointer", fontSize: "1.5rem" }}
+      aria-pressed={isDarkMode}
+      aria-label={isDarkMode ? 'Disable dark mode' : 'Enable dark mode'}
+      style={{ cursor: 'pointer', fontSize: '1rem', background: 'transparent', border: 'none' }}
     >
-      {isDarkMode ? <MdNightlightRound /> : <CiLight />}
-    </span>
+      {isDarkMode ? "dark" : "light"}
+    </button>
   );
 }
 
