@@ -1,13 +1,8 @@
-import { useState } from "react";
 import styles from "../css/Home.module.css";
 import SEO from "../components/SEO";
 
 function Home() {
-  const [isImageLoaded, setIsImageLoaded] = useState(false);
 
-  const handleImageLoad = () => {
-    setIsImageLoaded(true);
-  };
 
   return (
     <>
@@ -23,20 +18,8 @@ function Home() {
   <main className={styles.container}>
     <header className={styles.header}>
       <h1 className={styles.title}>
-        STUDIO CHOI
+        STUDIO CHOI SEUNG-WON
       </h1>
-      {!isImageLoaded && (
-        <div className={styles.skeleton} aria-hidden="true"></div>
-      )}
-      <figure>
-        <img
-          src={require("../assets/images/choi.png")}
-          alt="Choi Dev Profile"
-          className={styles.profileImage}
-          onLoad={handleImageLoad}
-          style={{ display: isImageLoaded ? "block" : "none" }}
-        />
-      </figure>
     </header>
       <article className={styles.content}>
         <p>
