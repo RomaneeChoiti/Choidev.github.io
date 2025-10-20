@@ -3,7 +3,7 @@ import importImages from "../../utils/importImages";
 
 const ArtWork = {
   id: "ArtWork-fromTheRoot-project-no-03",
-  title: "근원에서(From the Root) - Project No.03",
+  title: "뿌리: 근원에서 (Root: From the Root) - Project No.03",
   year: "2025",
   platform: ["Web"],
   description: "〈근원에서〉는 하나의 뿌리에서 방사형으로 퍼져나가는 수많은 선들이 서로를 만나 새로운 가지와 근원을 만들어내며, 시작과 끝의 경계를 넘어 관계와 생성의 순환을 시각화한 작품이다.",

@@ -7,7 +7,7 @@ const ArtWork = {
   startDate: "2025-10-15",
   endDate: null,
   id: "ArtWork-Untitled-project-no-05",
-  title: "Untitled - Project No.05",
+  title: "별자리: 미정 (Constellation: Untitled)- Project No.05",
   year: "2025",
   platform: ["Web"],
   description: "",

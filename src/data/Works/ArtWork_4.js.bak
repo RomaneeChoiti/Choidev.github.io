@@ -4,7 +4,7 @@ import ARTWORK_KEYWORDS from "../keywords";
 
 const ArtWork = {
   id: "ArtWork-Untitled-project-no-04",
-  title: "뿌리: 생성의 궤적(Root: Trajectories of Generation) - Project No.04",
+  title: "뿌리: 생성의 궤적 (Root: Trajectories of Generation) - Project No.04",
   year: "2025",
   platform: ["Web"],
   description: "〈뿌리: 생성의 궤적〉는 관계의 확장과 소멸, 그리고 존재가 서로를 통해 드러나는 방식을 시각적으로 탐구한 작품이다.",

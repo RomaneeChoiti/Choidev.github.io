@@ -8,7 +8,7 @@ const ArtWork = {
   startDate: "2023-03-01",
   endDate: null,
   id: "ArtWork-repeating-pattern-project-no-01",
-  title: "가제 : repeating pattern - Project No.01",
+  title: "뿌리: repeating pattern(Root: repeating pattern) - Project No.01",
   year: "2023",
   platform: ["Web"],
   description: "웹 기반의 반복적인 패턴을 생성하는 예술 작품으로, 사용자와의 상호작용을 통해 다양한 패턴을 탐구합니다.",

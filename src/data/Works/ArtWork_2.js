@@ -7,7 +7,7 @@ const ArtWork = {
   startDate: "2025-09-01",
   endDate: null,
   id: "ArtWork-root-project-no-02",
-  title: "가제 : ROOT - Project No.02",
+  title: "뿌리 : 미정 (Root: Untitled) - Project No.02",
   year: "2025",
   platform: ["Web"],
   description: "ROOT는 클릭을 통해 생성과 순환, 연결의 과정을 시각화하며, 생명의 흐름과 존재의 근원을 탐구하는 인터랙티브 작업이다.",
