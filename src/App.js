@@ -26,7 +26,7 @@ function App() {
         </div>
       </div>
       <footer>
-        <p>© 2024 Choi dev. All rights reserved.</p>
+        <p>© 2024 STUDIO CHOI. All rights reserved.</p>
       </footer>
     </Router>
   );
