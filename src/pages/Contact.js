@@ -16,7 +16,7 @@ function Contact() {
       />
       <main className={styles.container}>
         <header className={styles.header}>
-          <h1 className={styles.title}>Contact</h1>
+          <h1 className={styles.title}>CONTACT</h1>
         </header>
         <article className={styles.content}>
           <p>

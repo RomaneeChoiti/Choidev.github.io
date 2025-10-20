@@ -16,7 +16,7 @@ function ArtistStatement() {
 
       <main className={styles.container}>
         <header className={styles.header}>
-          <h1 className={styles.title}>Artist Statement</h1>
+          <h1 className={styles.title}>ARTIST STATEMENT</h1>
         </header>
 
         <article className={styles.content}>
