@@ -13,7 +13,6 @@
   gap: 1rem;
   width: 100%;
   justify-content: center;
-  margin-bottom: 2rem;
 }
 
 .title {
@@ -52,7 +51,6 @@
   text-decoration: none;
   font-style: italic;
   display: block;
-  margin-bottom: 1rem;
 }
 
 .email:hover {

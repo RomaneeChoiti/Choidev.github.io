@@ -8,12 +8,12 @@ function Navbar() {
     <nav>
       <ul>
         <li>
-          <Link to="/">Choi dev</Link>
+          <Link to="/">STUDIO CHOI</Link>
         </li>
         <li>
           <Link to="/works">Works</Link>
         </li>
-        <li>
+        {/* <li>
           <Link to="/FrontendNotes">Frontend</Link>
         </li>
         <li>
@@ -29,15 +29,15 @@ function Navbar() {
           <Link to="/HnSSkillNotes">Hard x Soft</Link>
         </li>
         <li>
-          {/* <Link to="/ComedyNotes">Comedy Notes</Link> */}
+          <Link to="/ComedyNotes">Comedy Notes</Link>
         </li>
         <li>
           <Link to="/blog">Blogs</Link>
+        </li> */}
+        <li>
+          <DarkModeToggle />
         </li>
       </ul>
-      <div style={{ marginTop: "1rem" }}>
-        <DarkModeToggle />
-      </div>
     </nav>
   );
 }
