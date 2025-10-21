@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/studioChoi/static/css/main.7ab592a3.css",
-    "main.js": "/studioChoi/static/js/main.1bc246cc.js",
+    "main.css": "/studioChoi/static/css/main.14437cdf.css",
+    "main.js": "/studioChoi/static/js/main.c95a81d1.js",
     "static/media/pattern.mp4": "/studioChoi/static/media/pattern.f8056eac5ce44e6cbb6b.mp4",
     "static/media/1.png": "/studioChoi/static/media/1.d4d1c90e959a09ae2ffe.png",
     "static/media/2.png": "/studioChoi/static/media/2.a06ebf42bb09d8b27366.png",
@@ -12,11 +12,11 @@
     "static/media/8.png": "/studioChoi/static/media/8.18aaf61b131b29f3ed6d.png",
     "static/media/7.png": "/studioChoi/static/media/7.74e7c24c5ef003c13a1f.png",
     "static/media/12.png": "/studioChoi/static/media/12.82fde32066c0b959b8bb.png",
+    "static/media/6.png": "/studioChoi/static/media/6.749b991c343d8527a770.png",
+    "static/media/5.png": "/studioChoi/static/media/5.49715af5aacde80c1f2f.png",
     "static/media/9.png": "/studioChoi/static/media/9.8bf76e11aa842516f5c4.png",
     "static/media/10.png": "/studioChoi/static/media/10.b666fac375382d35e7a2.png",
     "static/media/11.png": "/studioChoi/static/media/11.0d5594d1c73f6df4266b.png",
-    "static/media/5.png": "/studioChoi/static/media/5.49715af5aacde80c1f2f.png",
-    "static/media/6.png": "/studioChoi/static/media/6.749b991c343d8527a770.png",
     "static/media/pattern.png": "/studioChoi/static/media/pattern.8f0ece09ae716faa3e40.png",
     "static/media/14.png": "/studioChoi/static/media/14.11bfd4550d685523e52d.png",
     "static/media/logo.png": "/studioChoi/static/media/logo.dbc99480e8e65d9bbcbe.png",
@@ -31,11 +31,11 @@
     "static/media/slick.ttf": "/studioChoi/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "index.html": "/studioChoi/index.html",
     "static/media/slick.woff": "/studioChoi/static/media/slick.295183786cd8a1389865.woff",
-    "main.7ab592a3.css.map": "/studioChoi/static/css/main.7ab592a3.css.map",
-    "main.1bc246cc.js.map": "/studioChoi/static/js/main.1bc246cc.js.map"
+    "main.14437cdf.css.map": "/studioChoi/static/css/main.14437cdf.css.map",
+    "main.c95a81d1.js.map": "/studioChoi/static/js/main.c95a81d1.js.map"
   },
   "entrypoints": [
-    "static/css/main.7ab592a3.css",
-    "static/js/main.1bc246cc.js"
+    "static/css/main.14437cdf.css",
+    "static/js/main.c95a81d1.js"
   ]
 }
