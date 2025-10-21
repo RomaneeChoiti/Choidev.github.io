@@ -1,8 +1,7 @@
 .card {
-  background-color: #fff;
+  background-color: #000000;
   border-radius: 2px;
   overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   cursor: pointer;
   transition: transform 0.3s, box-shadow 0.3s;
 }
@@ -27,7 +26,7 @@
 
 .info h2 {
   font-size: 1.2rem;
-  color: #333;
+  color: #ffffff;
   margin: 0;
 }
 
@@ -41,7 +40,7 @@
 
 .info p {
   margin: 0;
-  color: #777;
+  color: #b1b1b1;
 }
 
 .skeleton {
