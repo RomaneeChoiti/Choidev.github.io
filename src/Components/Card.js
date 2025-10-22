@@ -22,7 +22,7 @@ function Card({ item, onClick }) {
       />
       <div className={styles.info}>
         <h2>{item.title}</h2>
-        {item.year && <p>{item.year}</p>}
+        {item.year && <p>{item.year}, Project No.{item.projectNo}</p>}
       </div>
     </div>
   );

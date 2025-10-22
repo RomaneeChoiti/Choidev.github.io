@@ -19,6 +19,11 @@
   max-width: 800px;
   margin: 0 auto;
 }
+.projectNum{
+  margin: 0;
+  font-size: 1.4ex;
+}
+
 .flexContainer {
   display: flex;
   gap: 2rem;
@@ -27,10 +32,15 @@
 }
 .info { flex: 1; }
 
-.title { font-size: 1.5rem; margin-bottom: 1rem; }
+.title { font-size: 1.35rem; margin-bottom: 0; }
 
-.platform,
-.year,
+.year{
+  font-size: 1.7ex;
+  margin: 0
+}
+.platform{
+  font-size: 1rem; margin-bottom: 0.2rem; margin-top: 0.4rem;
+}
 .description { font-size: 1rem; margin-bottom: 0.2rem; margin-top: 0.4rem; }
 
 .image { max-width: 25%; height: auto; margin: 1rem 0; }

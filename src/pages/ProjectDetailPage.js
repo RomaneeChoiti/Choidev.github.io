@@ -131,7 +131,9 @@ function ProjectDetail() {
         <div className={styles.info}>
           <p className={styles.title}>{project.title}</p>
           <p className={styles.platform}>{project.platform}</p>
+          <p className={styles.year}>{project.size}</p>
           <p className={styles.year}>{project.year}</p>
+          <p className={styles.projectNum}>Project No.{project.projectNo}</p>
           <p className={styles.description}>{project.description}</p>
         </div>
       </div>
