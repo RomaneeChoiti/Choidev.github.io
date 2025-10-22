@@ -3,13 +3,18 @@ import importImages from "../../utils/importImages";
 import ARTWORK_KEYWORDS from "../keywords";
 
 const ArtWork = {
+  keywords: ARTWORK_KEYWORDS['ArtWork-Untitled-project-no-06'],
+  startDate: "2025-10-17",
+  endDate: null,
   id: "ArtWork-Untitled-project-no-06",
-  title: "별자리: 미정 (Constellation: Untitled) - Project No.06",
+  title: "별자리: 미정 (Constellation: Untitled)",
   year: "2025",
-  platform: ["Web"],
+  projectNo: "06",
+  platform: ["웹 제너러티브 아트 및 평면 변형 시리즈 (디지털 프린트)"],
   description: "",
   features: [],
   additionalInfo: "",
+  size: "가변 크기, 최대 4K 해상도 지원",
   image: image1,
   images: importImages("artwork6", 4),
   video: "https://youtu.be/azEWGMsb-o0",
