@@ -18,8 +18,17 @@ const projects = req
     return (mod && mod.default) ? mod.default : mod;
   })
   .filter(Boolean)
+  // Keep only artwork modules: either id starts with "ArtWork" or
+  // the object contains a projectNo field. This filters out utility
+  // or integration projects that aren't artworks.
+  .filter((p) => {
+    if (!p) return false;
+    if (typeof p.id === 'string' && /^ArtWork/i.test(p.id)) return true;
+    if (p.projectNo) return true;
+    return false;
+  })
   // Sort by projectNo descending so higher project numbers appear first.
   // If a file doesn't have projectNo, it will be treated as 0.
-  .sort((a, b) => (b.projectNo || 0) - (a.projectNo || 0));
+  .sort((a, b) => (Number(b.projectNo) || 0) - (Number(a.projectNo) || 0));
 
 export default projects;

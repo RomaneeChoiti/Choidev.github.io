@@ -19,6 +19,16 @@
   gap: 1.5rem;
 }
 
+/* Ensure the work/project grid shows 2 columns on medium and larger screens
+   (keeps 2 columns at 1020px and above per request). If you later want
+   more columns on very wide screens, adjust this rule or add a new break
+   point for min-width: 1400px, etc. */
+@media (min-width: 720px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 .card {
   background-color: #fff;
   border: 1px solid #ddd;
