@@ -1,20 +1,25 @@
 // import TodoHunter from "../data/Works/Todo-Hunter";
 // import GreenWaySeoulData from "../data/Works/GreenWaySeoul";
 // import BinFinderData from "../data/Works/Binfinder";
-import ArtWork_1 from "../data/Works/ArtWork_1";
-import ArtWork_2 from "../data/Works/ArtWork_2";
-import ArtWork_3 from "../data/Works/ArtWork_3";
-import ArtWork_4 from "../data/Works/ArtWork_4";
-import ArtWork_5 from "../data/Works/ArtWork_5";
-import ArtWork_6 from "../data/Works/ArtWork_6";
-import ArtWork_7 from "../data/Works/ArtWork_7";
 
+// Automatically import all artwork modules from the Works folder.
+// New artwork files added to src/data/Works will be picked up without
+// needing manual edits here. Modules should default-export the
+// artwork object (the existing files follow this pattern).
 
+// require.context is provided by webpack (used by Create React App).
+// It will include any .js files directly inside the Works directory.
+const req = require.context('./Works', false, /\.js$/);
 
-
-
-// const projects = [ArtWork_6, ArtWork_5, ArtWork_4, ArtWork_3, ArtWork_2, TodoHunter, GreenWaySeoulData, BinFinderData, ArtWork_1];
-const projects = [ArtWork_7, ArtWork_6, ArtWork_5, ArtWork_4, ArtWork_3, ArtWork_2, ArtWork_1];
-
+const projects = req
+  .keys()
+  .map((key) => {
+    const mod = req(key);
+    return (mod && mod.default) ? mod.default : mod;
+  })
+  .filter(Boolean)
+  // Sort by projectNo descending so higher project numbers appear first.
+  // If a file doesn't have projectNo, it will be treated as 0.
+  .sort((a, b) => (b.projectNo || 0) - (a.projectNo || 0));
 
 export default projects;
