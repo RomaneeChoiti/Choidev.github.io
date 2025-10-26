@@ -4,7 +4,7 @@ import ARTWORK_KEYWORDS from "../keywords";
 
 const ArtWork = {
   keywords: ARTWORK_KEYWORDS['ArtWork-Untitled-project-no-10'],
-  startDate: "2025-10-22",
+  startDate: "2025-10-26",
   endDate: null,
   id: "ArtWork-Untitled-project-no-10",
   title: "뿌리+파도: 미정 (Root+Wave: Untitled)",
