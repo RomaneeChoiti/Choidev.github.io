@@ -1,0 +1,12 @@
+# robots.txt for STUDIO CHOI
+# Allow all user agents to crawl the site.
+User-agent: *
+Allow: /
+
+# Point search engines to the sitemap (generated/placed at build time).
+Sitemap: https://romaneechoiti.github.io/studioChoi/sitemap.xml
+Host: romaneechoiti.github.io
+
+# Note: If you want to block specific paths (e.g. /admin), add Disallow rules.
+# Crawl-delay is generally unnecessary for Google. For more control, generate
+# a sitemap.xml and submit it in Google Search Console.
