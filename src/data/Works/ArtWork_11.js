@@ -3,7 +3,7 @@ import importImages from "../../utils/importImages";
 import ARTWORK_KEYWORDS from "../keywords";
 
 const ArtWork = {
-  keywords: ARTWORK_KEYWORDS['ArtWork-Untitled-project-no-10'],
+  keywords: ARTWORK_KEYWORDS['ArtWork-Untitled-project-no-11'],
   startDate: "2025-10-27",
   endDate: null,
   id: "ArtWork-Untitled-project-no-11",
