@@ -18,8 +18,8 @@ function Bio() {
       url: typeof window !== 'undefined' ? window.location.href : undefined,
       sameAs: [
         /* Add public profile links here for stronger identity signals, e.g.:
-           'https://www.instagram.com/yourhandle',
-           'https://www.linkedin.com/in/yourprofile'
+        'https://www.instagram.com/yourhandle',
+        'https://www.linkedin.com/in/yourprofile'
         */
       ].filter(Boolean),
     };
