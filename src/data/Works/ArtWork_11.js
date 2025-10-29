@@ -16,7 +16,7 @@ const ArtWork = {
   additionalInfo: "",
   size: "1920x1080 (FHD)",
   image: image1,
-  images: importImages("artwork11", 11),
+  images: importImages("artwork11", 6),
   video: "https://youtu.be/hiv_RKp2_5M",
   VideoOverview: [
 ],
